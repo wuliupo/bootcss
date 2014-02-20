@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>LESS &laquo; 一种动态样式语言</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="Lesscss,CSS">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="bootcss.com">
+
+     <!--[if lt IE 7]><script>window.location.href = "/ie.html"; </script><![endif]-->
+
+    <link rel="stylesheet/less" type="text/css" href="./less/main.less">
+    <script src="//cdnjs.bootcss.com/ajax/libs/less.js/1.3.3/less.min.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    
+    <script type="text/javascript">
+      (function () {
+      	//作者不希望用ie访问该站点
+        if (/Microsoft/.test(navigator.appName)) { return }
+
+        window.onload = function () {
+          var headers = document.querySelectorAll('#docs h2, #guide h1');
+          var menu = document.getElementById('menu');
+          var init = menu.offsetTop;
+          var docked;
+
+          /*for (var i = 0; i < headers.length; i++) {
+            headers[i].id = '-' + headers[i].innerHTML.toLowerCase().replace(/ /g, '-');
+          }*/
+
+          window.onscroll = function () {
+            if (!docked && (menu.offsetTop - scrollTop() < 0)) {
+              menu.style.top = 0;
+              menu.style.position = 'fixed';
+              menu.className = 'docked';
+              docked = true;
+            } else if (docked && scrollTop() <= init) {
+              menu.style.position = 'absolute';
+              menu.style.top = init + 'px';
+              menu.className = menu.className.replace('docked', '');
+              docked = false;
+            }
+          };
+
+
+          (function () {
+            var link     = document.getElementById('guide-link'),
+                menu     = document.getElementById('menu'),
+                dropdown = document.getElementById('dropdown');
+
+            link.onmouseover = function () {
+              link.className = 'dark-red';
+              dropdown.style.display = 'block';
+            };
+            link.onmouseout = function (e) {
+              if (e.relatedTarget === dropdown) { return }
+              link.className = link.className.replace('dark-red', '');
+              hide ();
+            };
+            dropdown.onmouseout = function (e) {
+              var t = e.relatedTarget;
+
+              if (e.target == link) { return }
+
+              while (t !== document.body) {
+                if (t == dropdown) { return }
+                else               { t = t.parentNode }
+              } 
+              link.className = link.className.replace('dark-red', '');
+              hide ();
+            };
+
+            function hide() { dropdown.style.display = 'none' }
+          })();
+        };
+
+        function scrollTop() {
+          return document.body.scrollTop || document.documentElement.scrollTop;
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <section>
+      <header id="main">
+  <div class="content">
+    <section id="intro">
+      <div id="logo"></div>
+      <h2>一种 <span>动态</span> 样式 <span>语言</span>.</h2>
+      <h3>
+        LESS 将 CSS 赋予了动态语言的特性，如 <span>变量</span>， <span>继承</span>，
+        <span>运算</span>， <span>函数</span>. LESS 既可以在 <span>客户端</span> 上运行 (支持IE 6+, Webkit, Firefox)，也可以借助<span>Node.js</span>或者<span>Rhino</span>在服务端运行。
+      </h3>
+      <a id="download" href="http://cloud.github.com/downloads/cloudhead/less.js/less-1.3.1.min.js">
+        <img src="./img/download-button.png" /></a><div id="download-info">version <code>1.3.1</code></div>
+    </section>
+
+    <section id="example">
+    <p>LESS可以这样来写CSS:</p>
+
+<pre><code>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  box-shadow:         @style @c;
+  -webkit-box-shadow: @style @c;
+  -moz-box-shadow:    @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box { 
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</code></pre>
+
+<p>在引入<code>less.js</code>前先要把你的样式文件引入 :</p>
+
+<pre><code>&lt;link rel="stylesheet/less" type="text/css" href="styles.less"&gt;
+&lt;script src="less.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre>
+
+    </section>
+  </div>
+  <div style="clear: both"></div>
+</header>
+
+<section id="menu">
+  <div class="content">
+    <nav>
+      <a href="#synopsis">了解</a>
+      <a href="#guide">使用</a>
+      <a href="#docs" id="guide-link">语法</a>
+      <a href="http://github.com/cloudhead/less.js">源码</a>
+      <a href="#about">关于</a>
+    </nav>
+    <div id="dropdown">
+      <ul>
+        <li><a href="#-variables">变量</a></li>
+        <li><a href="#-mixins">混合</a></li>
+        <li><a href="#-parametric-mixins">带参数混合</a></li>
+        <li><a href="#-nested-rules">嵌套规则</a></li>
+        <li><a href="#-operations">运算</a></li>
+        <li><a href="#-color-functions">Color 函数</a></li>
+        <li><a href="#-namespaces">命名空间</a></li>
+        <li><a href="#-scope">作用域</a></li>
+        <li><a href="#-comments">注释</a></li>
+        <li><a href="#-importing">Importing</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="synopsis" class="page">
+  <div class="content">
+    <h2>变量</h2>
+
+<p>变量允许我们单独定义一系列通用的样式，然后在需要的时候去调用。所以在做全局样式调整的时候我们可能只需要修改几行代码就可以了。</p>
+
+<table class="code-example" cellpadding="0">
+  <tr><td>
+  <pre class="less-example">
+  <code>// LESS
+
+@color: #4D926F;
+
+#header {
+  color: @color;
+}
+h2 {
+  color: @color;
+}</code></pre>
+  </td><td>
+  <pre class="css-output"><code>/* 生成的 CSS */
+
+#header {
+  color: #4D926F;
+}
+h2 {
+  color: #4D926F;
+}</code></pre></td>
+  </tr>
+</table>
+
+
+<h2>混合</h2>
+
+<p>混合可以将一个定义好的class A轻松的引入到另一个class B中，从而简单实现class B继承class A中的所有属性。我们还可以带参数地调用，就像使用函数一样。</p>
+
+<table class="code-example" cellpadding="0">
+  <tr><td>
+  <pre class="less-example"><code>// LESS
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+#header {
+  .rounded-corners;
+}
+#footer {
+  .rounded-corners(10px);
+}</code></pre></td>
+
+<td>
+  <pre class="css-output"><code>/* 生成的 CSS */
+
+#header {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+#footer {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}</code></pre>
+  </td></tr>
+</table>
+
+
+<h2>嵌套规则</h2>
+
+<p>我们可以在一个选择器中嵌套另一个选择器来实现继承，这样很大程度减少了代码量，并且代码看起来更加的清晰。</p>
+
+<table class="code-example" cellpadding="0">
+  <tr><td>
+  <pre class="less-example">
+<code>// LESS
+
+#header {
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  p { font-size: 12px;
+    a { text-decoration: none;
+      &:hover { border-width: 1px }
+    }
+  }
+}
+
+</code></pre></td>
+
+<td>
+  <pre class="css-output"><code>/* 生成的 CSS */
+
+#header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+#header p {
+  font-size: 12px;
+}
+#header p a {
+  text-decoration: none;
+}
+#header p a:hover {
+  border-width: 1px;
+}
+
+</code></pre>
+  </td></tr>
+</table>
+
+
+<h2>函数 &amp; 运算</h2>
+
+<p>运算提供了加，减，乘，除操作；我们可以做属性值和颜色的运算，这样就可以实现属性值之间的复杂关系。LESS中的函数一一映射了JavaScript代码，如果你愿意的话可以操作属性值。</p>
+
+<table class="code-example" cellpadding="0">
+  <tr><td>
+  <pre class="less-example">
+<code>// LESS
+
+@the-border: 1px;
+@base-color: #111;
+@red:        #842210;
+
+#header {
+  color: @base-color * 3;
+  border-left: @the-border;
+  border-right: @the-border * 2;
+}
+#footer { 
+  color: @base-color + #003300;
+  border-color: desaturate(@red, 10%);
+}
+
+</code></pre></td>
+
+<td>
+  <pre class="css-output"><code>/* 生成的 CSS */
+
+#header {
+  color: #333;
+  border-left: 1px;
+  border-right: 2px;
+}
+#footer { 
+  color: #114411;
+  border-color: #7d2717;
+}
+
+</code></pre>
+  </td></tr>
+</table>
+
+
+  </div>
+</section>
+
+<section id="guide" class="page">
+  <div class="content">
+    <h1>在客户端使用</h1>
+
+<p>引入你的 <code>.less</code> 样式文件的时候要设置 <code>rel</code> 属性值为 &ldquo;<code>stylesheet/less</code>&rdquo;:</p>
+
+<pre><code>&lt;link rel="stylesheet/less" type="text/css" href="styles.less"&gt;
+</code></pre>
+
+<p>然后点击页面顶部download按钮下载 <code>less.js</code>, 在<code>&lt;head&gt;</code> 中引入:</p>
+
+<pre><code>&lt;script src="less.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>注意你的less样式文件一定要在引入less.js前先引入。</p>
+<p>备注：请在服务器环境下使用！本地直接打开可能会报错！</p>
+
+<h2>监视模式</h2>
+<p>监视模式是客户端的一个功能，这个功能允许你当你改变样式的时候，客户端将自动刷新。</p>
+<p>要使用它，只要在URL后面加上'<code>#!watch</code>'，然后刷新页面就可以了。另外，你也可以通过在终端运行<code>less.watch()</code>来启动监视模式。</p>
+
+<h1>在服务器端使用</h1>
+
+<h2>安装</h2>
+
+<p>在服务器端安装 LESS 的最简单方式就是通过 <a href="http://github.com/isaacs/npm">npm</a>(node 的包管理器), 像这样:</p>
+
+<pre><code>$ npm install less
+</code></pre>
+
+<p>如果你想下载最新稳定版本的 LESS，可以尝试像下面这样操作:</p>
+
+<pre><code>$ npm install less@latest
+</code></pre>
+
+<h2>使用</h2>
+
+<p>只要安装了 LESS，就可以在Node中像这样调用编译器:</p>
+
+<pre><code>var less = require('less');
+
+less.render('.class { width: 1 + 1 }', function (e, css) {
+    console.log(css);
+});
+</code></pre>
+
+<p>上面会输出</p>
+
+<pre><code>.class {
+  width: 2;
+}
+</code></pre>
+
+<p>你也可以手动调用解析器和编译器:</p>
+
+<pre><code>var parser = new(less.Parser);
+
+parser.parse('.class { width: 1 + 1 }', function (err, tree) {
+    if (err) { return console.error(err) }
+    console.log(tree.toCSS());
+});
+</code></pre>
+
+<h2>配置</h2>
+
+<p>你可以向解析器传递参数:</p>
+
+<pre><code>var parser = new(less.Parser)({
+    paths: ['.', './lib'], // Specify search paths for @import directives
+    filename: 'style.less' // Specify a filename, for better error messages
+});
+
+parser.parse('.class { width: 1 + 1 }', function (e, tree) {
+    tree.toCSS({ compress: true }); // Minify CSS output
+});
+</code></pre>
+
+<h2>在命令行下使用</h2>
+
+<p>你可以在终端调用 LESS 解析器:</p>
+
+<pre><code>$ lessc styles.less
+</code></pre>
+
+<p>上面的命令会将编译后的 CSS 传递给 <code>stdout</code>, 你可以将它保存到一个文件中:</p>
+
+<pre><code>$ lessc styles.less &gt; styles.css
+</code></pre>
+
+<p>如何你想将编译后的 CSS 压缩掉，那么加一个 <code>-x</code> 参数就可以了.</p>
+
+  </div>
+</section>
+
+<section id="docs" class="page">
+  <h1> LESS 语法</h1>
+  <div class="content">
+      <p>LESS 做为 CSS 的一种形式的扩展，它并没有阉割 CSS 的功能，而是在现有的 CSS 语法上，添加了很多额外的功能，所以学习 LESS 是一件轻而易举的事情，果断学习之！</p>
+
+<h2 id='-variables'>变量</h2>
+
+<p>很容易理解:</p>
+
+<pre><code>@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+#header { color: @light-blue; }
+</code></pre>
+
+<p>输出:</p>
+
+<pre><code>#header { color: #6c94be; }
+</code></pre>
+
+<p>甚至可以用变量名定义为变量:</p>
+
+<pre><code>@fnord: "I am fnord.";
+@var: 'fnord';
+content: @@var;
+</code></pre>
+
+<p>解析后:</p>
+
+<pre><code>content: "I am fnord.";
+</code></pre>
+
+<p>请注意 LESS 中的变量为完全的 &lsquo;常量&rsquo; ，所以只能定义一次.</p>
+
+<h2 id='-mixins'>混合</h2>
+
+<p>在 LESS 中我们可以定义一些通用的属性集为一个class，然后在另一个class中去调用这些属性. 下面有这样一个class:</p>
+
+<pre><code>.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+</code></pre>
+
+<p>那如果我们现在需要在其他class中引入那些通用的属性集，那么我们只需要在任何class中像下面这样调用就可以了:</p>
+
+<pre><code>#menu a {
+  color: #111;
+  .bordered;
+}
+.post a {
+  color: red;
+  .bordered;
+}
+</code></pre>
+
+<p><code>.bordered</code> class里面的属性样式都会在 <code>#menu a</code> 和 <code>.post a</code>中体现出来:</p>
+
+<pre><code>#menu a {
+  color: #111;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+.post a {
+  color: red;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+</code></pre>
+
+<p>任何 CSS <em>class</em>, <em>id</em> 或者 <em>元素</em> 属性集都可以以同样的方式引入.</p>
+
+<h2 id='-parametric-mixins'>带参数混合</h2>
+
+<p>在 LESS 中，你还可以像函数一样定义一个带参数的属性集合:</p>
+
+<pre><code>.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+</code></pre>
+
+<p>然后在其他class中像这样调用它:</p>
+
+<pre><code>#header {
+  .border-radius(4px);
+}
+.button {
+  .border-radius(6px);  
+}
+</code></pre>
+
+<p>我们还可以像这样给参数设置默认值:</p>
+
+<pre><code>.border-radius (@radius: 5px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+</code></pre>
+
+<p>所以现在如果我们像这样调用它的话:</p>
+
+<pre><code>#header {
+  .border-radius;  
+}
+</code></pre>
+
+<p>radius的值就会是5px.</p>
+
+<p>你也可以定义不带参数属性集合,如果你想隐藏这个属性集合，不让它暴露到CSS中去，但是你还想在其他的属性集合中引用，你会发现这个方法非常的好用:</p>
+
+<pre><code>.wrap () {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+
+pre { .wrap }
+</code></pre>
+
+<p>输出:</p>
+
+<pre><code>pre {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+</code></pre>
+
+<h3><code>@arguments</code> 变量</h3>
+
+<p><code>@arguments</code>包含了所有传递进来的参数. 如果你不想单独处理每一个参数的话就可以像这样写:</p>
+
+<pre><code>.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+.box-shadow(2px, 5px);
+</code></pre>
+
+<p>将会输出:</p>
+
+<pre><code>  box-shadow: 2px 5px 1px #000;
+  -moz-box-shadow: 2px 5px 1px #000;
+  -webkit-box-shadow: 2px 5px 1px #000;
+</code></pre>
+
+<h2>模式匹配和导引表达式</h2>
+
+<p>有些情况下，我们想根据传入的参数来改变混合的默认呈现，比如下面这个例子：</p>
+
+<pre><code>.mixin (@s, @color) { ... }
+
+.class {
+  .mixin(@switch, #888);
+}
+</code></pre>
+
+
+<p>如果想让<code>.mixin</code>根据不同的<code>@switch</code>值而表现各异，如下这般设置：</p>
+
+<pre><code>.mixin (dark, @color) {
+  color: darken(@color, 10%);
+}
+.mixin (light, @color) {
+  color: lighten(@color, 10%);
+}
+.mixin (@_, @color) {
+  display: block;
+}
+</code></pre>
+
+<p>现在，如果运行:</p>
+
+<pre><code>@switch: light;
+
+.class {
+  .mixin(@switch, #888);
+}
+</code></pre>
+
+<p>就会得到下列CSS:</p>
+
+<pre><code>.class {
+  color: #a2a2a2;
+  display: block;
+}
+</code></pre>
+
+<p>如上，<code>.mixin</code>就会得到传入颜色的浅色。如果<code>@switch</code>设为dark，就会得到深色。</p>
+
+<p>具体实现如下：</p>
+
+<ul>
+<li>第一个混合定义并未被匹配，因为它只接受<code>dark</code>做为首参</li>
+<li>第二个混合定义被成功匹配，因为它只接受<code>light</code></li>
+<li>第三个混合定义被成功匹配，因为它接受任意值</li>
+</ul>
+
+
+<p>只有被匹配的混合才会被使用。变量可以匹配任意的传入值，而变量以外的固定值就仅仅匹配与其相等的传入值。</p>
+
+<p>我们也可以匹配多个参数：</p>
+
+<pre><code>.mixin (@a) {
+  color: @a;
+}
+.mixin (@a, @b) {
+  color: fade(@a, @b);
+}
+</code></pre>
+
+<p>Now if we call <code>.mixin</code> with a single argument, we will get the output of the first definition,
+but if we call it with <em>two</em> arguments, we will get the second definition, namely <code>@a</code> faded to <code>@b</code>.</p>
+
+<h3>引导</h3>
+
+<p>当我们想根据表达式进行匹配，而非根据值和参数匹配时，导引就显得非常有用。如果你对函数式编程非常熟悉，那么你很可能已经使用过导引。</p>
+
+<p>为了尽可能地保留CSS的可声明性，LESS通过导引混合而非if/else语句来实现条件判断，因为前者已在@media query特性中被定义。</p>
+
+<p>以此例做为开始：</p>
+
+<pre><code>.mixin (@a) when (lightness(@a) &gt;= 50%) {
+  background-color: black;
+}
+.mixin (@a) when (lightness(@a) &lt; 50%) {
+  background-color: white;
+}
+.mixin (@a) {
+  color: @a;
+}
+</code></pre>
+
+<p>when关键字用以定义一个导引序列(此例只有一个导引)。接下来我们运行下列代码：</p>
+
+<pre><code>.class1 { .mixin(#ddd) }
+.class2 { .mixin(#555) }
+</code></pre>
+
+<p>就会得到：</p>
+
+<pre><code>.class1 {
+  background-color: black;
+  color: #ddd;
+}
+.class2 {
+  background-color: white;
+  color: #555;
+}
+</code></pre>
+
+<p>导引中可用的全部比较运算有： <strong><code>&gt; &gt;= = =&lt; &lt;</code></strong>。此外，关键字<code>true</code>只表示布尔真值，下面两个混合是相同的：</p>
+
+<pre><code>.truth (@a) when (@a) { ... }
+.truth (@a) when (@a = true) { ... }
+</code></pre>
+
+<p>除去关键字true以外的值都被视示布尔假：</p>
+
+<pre><code>.class {
+  .truth(40); // Will not match any of the above definitions.
+}
+</code></pre>
+
+<p>导引序列使用逗号&lsquo;<code>,</code>&rsquo;&mdash;分割，当且仅当所有条件都符合时，才会被视为匹配成功。</p>
+
+<pre><code>.mixin (@a) when (@a &gt; 10), (@a &lt; -10) { ... }
+</code></pre>
+
+<p>导引可以无参数，也可以对参数进行比较运算：</p>
+
+<pre><code>@media: mobile;
+
+.mixin (@a) when (@media = mobile) { ... }
+.mixin (@a) when (@media = desktop) { ... }
+
+.max (@a, @b) when (@a &gt; @b) { width: @a }
+.max (@a, @b) when (@a &lt; @b) { width: @b }
+</code></pre>
+
+<p>最后，如果想基于值的类型进行匹配，我们就可以使用is*函式：</p>
+
+<pre><code>.mixin (@a, @b: 0) when (isnumber(@b)) { ... }
+.mixin (@a, @b: black) when (iscolor(@b)) { ... }
+</code></pre>
+
+<p>下面就是常见的检测函式：</p>
+
+<ul>
+<li><code>iscolor</code></li>
+<li><code>isnumber</code></li>
+<li><code>isstring</code></li>
+<li><code>iskeyword</code></li>
+<li><code>isurl</code></li>
+</ul>
+
+
+<p>如果你想判断一个值是纯数字，还是某个单位量，可以使用下列函式：</p>
+
+<ul>
+<li><code>ispixel</code></li>
+<li><code>ispercentage</code></li>
+<li><code>isem</code></li>
+</ul>
+
+
+<p>最后再补充一点，在导引序列中可以使用<strong><code>and</code></strong>关键字实现与条件：</p>
+
+<pre><code>.mixin (@a) when (isnumber(@a)) and (@a &gt; 0) { ... }
+</code></pre>
+
+<p>使用<strong><code>not</code></strong>关键字实现或条件</p>
+
+<pre><code>.mixin (@b) when not (@b &gt; 0) { ... }
+</code></pre>
+
+
+
+<h2 id='-nested-rules'>嵌套规则</h2>
+
+<p>LESS 可以让我们以<em>嵌套</em>的方式编写层叠样式.
+让我们先看下下面这段 CSS:</p>
+
+<pre><code>#header { color: black; }
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo { 
+  width: 300px; 
+}
+#header .logo:hover {
+  text-decoration: none;
+}
+</code></pre>
+
+<p>在 LESS 中, 我们就可以这样写:</p>
+
+<pre><code>#header {
+  color: black;
+
+  .navigation {
+    font-size: 12px;
+  }
+  .logo {
+    width: 300px;
+    &amp;:hover { text-decoration: none }
+  }
+}
+</code></pre>
+
+<p>或者这样写:</p>
+
+<pre><code>#header        { color: black;
+  .navigation  { font-size: 12px }
+  .logo        { width: 300px;
+    &amp;:hover    { text-decoration: none }
+  }
+}
+</code></pre>
+
+<p>代码更简洁了，而且感觉跟<code>DOM</code>结构格式有点像.</p>
+
+<p>注意 <code>&amp;</code> 符号的使用&mdash;如果你想写串联选择器，而不是写后代选择器，就可以用到<code>&amp;</code>了. 这点对伪类尤其有用如 <code>:hover</code> 和 <code>:focus</code>.</p>
+
+<p>例如:</p>
+
+<pre><code>.bordered {
+  &amp;.float {
+    float: left; 
+  }
+  .top {
+    margin: 5px; 
+  }
+}
+</code></pre>
+
+<p>会输出</p>
+
+<pre><code>.bordered.float {
+  float: left;  
+}
+.bordered .top {
+  margin: 5px;
+}
+</code></pre>
+
+<h2 id='-operations'>运算</h2>
+
+<p>任何数字、颜色或者变量都可以参与运算. 来看一组例子:</p>
+
+<pre><code>@base: 5%;
+@filler: @base * 2;
+@other: @base + @filler;
+
+color: #888 / 4;
+background-color: @base-color + #111;
+height: 100% / 2 + @filler;
+</code></pre>
+
+<p>LESS 的运算已经超出了我们的期望，它能够分辨出颜色和单位。如果像下面这样单位运算的话:</p>
+
+<pre><code>@var: 1px + 5;
+</code></pre>
+
+<p>LESS 会输出 <code>6px</code>.</p>
+
+<p>括号也同样允许使用:</p>
+
+<pre><code>width: (@var + 5) * 2;
+</code></pre>
+
+<p>并且可以在复合属性中进行运算:</p>
+
+<pre><code>border: (@width * 2) solid black;
+</code></pre>
+
+<h2 id='-color-functions'>Color 函数</h2>
+
+<p>LESS 提供了一系列的颜色运算函数. 颜色会先被转化成 <em>HSL</em> 色彩空间, 然后在通道级别操作:</p>
+
+<pre><code>
+lighten(@color, 10%);     // return a color which is 10% *lighter* than @color
+darken(@color, 10%);      // return a color which is 10% *darker* than @color
+
+saturate(@color, 10%);    // return a color 10% *more* saturated than @color
+desaturate(@color, 10%);  // return a color 10% *less* saturated than @color
+
+fadein(@color, 10%);      // return a color 10% *less* transparent than @color
+fadeout(@color, 10%);     // return a color 10% *more* transparent than @color
+fade(@color, 50%);        // return @color with 50% transparency
+
+spin(@color, 10);         // return a color with a 10 degree larger in hue than @color
+spin(@color, -10);        // return a color with a 10 degree smaller hue than @color
+
+mix(@color1, @color2);    // return a mix of @color1 and @color2
+</code></pre>
+
+<p>使用起来相当简单:</p>
+
+<pre><code>@base: #f04615;
+
+.class {
+  color: saturate(@base, 5%);
+  background-color: lighten(spin(@base, 8), 25%);
+}
+</code></pre>
+
+<p>你还可以提取颜色信息:</p>
+
+<pre><code>hue(@color);        // returns the `hue` channel of @color
+saturation(@color); // returns the `saturation` channel of @color
+lightness(@color);  // returns the 'lightness' channel of @color
+</code></pre>
+
+<p>如果你想在一种颜色的通道上创建另一种颜色，这些函数就显得那么的好用，例如:</p>
+
+<pre><code>@new: hsl(hue(@old), 45%, 90%);
+</code></pre>
+
+<p><code>@new</code> 将会保持 <code>@old</code>的 <em>色调</em>, 但是具有不同的饱和度和亮度.</p>
+
+<h2 id="-math-functions">Math 函数</h2>
+<p>LESS提供了一组方便的数学函数，你可以使用它们处理一些数字类型的值:</p>
+<pre><code>round(<span class="number">1.67</span>); <span class="comment">// returns `2`</span>
+ceil(<span class="number">2.4</span>);   <span class="comment">// returns `3`</span>
+floor(<span class="number">2.6</span>);  <span class="comment">// returns `2`</span>
+</code></pre>
+<p>如果你想将一个值转化为百分比，你可以使用<code>percentage</code> 函数:</p>
+<pre><code>percentage(<span class="number">0.5</span>); <span class="comment">// returns `50%`</span>
+</code></pre>
+
+<h2 id='-namespaces'>命名空间</h2>
+
+<p>有时候，你可能为了更好组织CSS或者单纯是为了更好的封装，将一些变量或者混合模块打包起来, 你可以像下面这样在<code>#bundle</code>中定义一些属性集之后可以重复使用:</p>
+
+<pre><code>#bundle {
+  .button () {
+    display: block;
+    border: 1px solid black;
+    background-color: grey;
+    &amp;:hover { background-color: white }
+  }
+  .tab { ... }
+  .citation { ... }
+}
+</code></pre>
+
+<p>你只需要在 <code>#header a</code>中像这样引入 <code>.button</code>:</p>
+
+<pre><code>#header a {
+  color: orange;
+  #bundle &gt; .button;
+}
+</code></pre>
+
+<h2 id='-scope'>作用域</h2>
+
+<p>LESS 中的作用域跟其他编程语言非常类似，首先会从本地查找变量或者混合模块，如果没找到的话会去父级作用域中查找，直到找到为止.</p>
+
+<pre><code>@var: red;
+
+#page {
+  @var: white;
+  #header {
+    color: @var; // white
+  }
+}
+
+#footer {
+  color: @var; // red  
+}
+</code></pre>
+
+<h2 id='-comments'>注释</h2>
+
+<p>CSS 形式的注释在 LESS 中是依然保留的:</p>
+
+<pre><code>/* Hello, I'm a CSS-style comment */
+.class { color: black }
+</code></pre>
+
+<p>LESS 同样也支持双斜线的注释, 但是编译成 CSS 的时候自动过滤掉:</p>
+
+<pre><code>// Hi, I'm a silent comment, I won't show up in your CSS
+.class { color: white }
+</code></pre>
+
+<h2 id='-importing'>Importing</h2>
+
+<p>你可以在main文件中通过下面的形势引入 <code>.less</code> 文件,
+ <code>.less</code> 后缀可带可不带:</p>
+
+<pre><code>@import "lib.less";
+@import "lib";
+</code></pre>
+
+<p>如果你想导入一个CSS文件而且不想LESS对它进行处理，只需要使用<code>.css</code>后缀就可以:</p>
+
+<pre><code>@import "lib.css";
+</code></pre>
+
+<p>这样LESS就会跳过它不去处理它.</p>
+
+<h2>字符串插值</h2>
+
+<p>变量可以用类似ruby和php的方式嵌入到字符串中，像<code>@{name}</code>这样的结构:</p>
+
+<pre><code>@base-url: "http://assets.fnord.com";
+background-image: url("@{base-url}/images/bg.png");
+</code></pre>
+
+<h2>避免编译</h2>
+
+<p>有时候我们需要输出一些不正确的CSS语法或者使用一些 LESS不认识的专有语法.</p>
+
+<p>要输出这样的值我们可以在字符串前加上一个 <code>~</code>, 例如:</p>
+
+<pre><code>
+.class {
+  filter: ~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
+}
+</code></pre>
+
+<p>我们可以将要避免编译的值用 &ldquo;&rdquo;包含起来，输出结果为:</p>
+
+<pre><code>
+.class {
+  filter: ms:alwaysHasItsOwnSyntax.For.Stuff();
+}
+</code></pre>
+
+<h2>JavaScript 表达式</h2>
+
+<p>JavaScript 表达式也可以在.less 文件中使用. 可以通过反引号的方式使用:</p>
+
+<pre><code>@var: `"hello".toUpperCase() + '!'`;
+</code></pre>
+
+<p>输出:</p>
+
+<pre><code>@var: "HELLO!";
+</code></pre>
+
+<p>注意你也可以同时使用字符串插值和避免编译:</p>
+
+<pre><code>@str: "hello";
+@var: ~`"@{str}".toUpperCase() + '!'`;
+</code></pre>
+
+<p>输出:</p>
+
+<pre><code>@var: HELLO!;
+</code></pre>
+
+<p>它也可以访问JavaScript环境:</p>
+
+<pre><code>@height: `document.body.clientHeight`;
+</code></pre>
+<p>如果你想将一个JavaScript字符串解析成16进制的颜色值, 你可以使用 <code>color</code> 函数:</p>
+<pre><code><span class="variable">@color</span>: color(`window<span class="mixin">.colors</span><span class="mixin">.baseColor</span>`);
+<span class="variable">@darkcolor</span>: darken(<span class="variable">@color</span>, <span class="number">10%</span>);
+</code></pre>
+  </div>
+</section>
+
+<section id="translations" class="page">
+  <div class="content">
+    <h1>其他国家的LESS站点</h1>
+    <ul>
+        <li>English: <a href="http://lesscss.org">http://lesscss.org</a>（需要翻墙）</li>
+        <li>Russian: <a href="http://lesscss.ru">http://lesscss.ru</a></li>
+        <li>German:<a href="http://lesscss.de">http://lesscss.de</a></li>
+        <li>Japanese: <a href="http://less-ja.studiomohawk.com/">http://less-ja.studiomohawk.com/</a></li>
+        <li>Belarus: <a href="http://www.designcontest.com/show/lesscss-be">http://www.designcontest.com/show/lesscss-be</a></li>
+    </ul>
+  </div>
+</section>
+<section id="about" class="page">
+  <div class="content">
+    <h1>About</h1>
+
+<p><a href="http://cloudhead.io">Alexis Sellier</a> -LESS作者</p>
+<p><a href="http://www.lesscss.net">LESS中国官网</a></p>
+<p>说明：这个页面是为了给热爱Bootstrap的攻城师一个快速的查阅LessCss文档的途径。由于已经有<a href="http://www.lesscss.net">LESS中国官网</a>的杰出翻译了，因此直接剽窃过来啦，哈哈。由衷的感谢他们的贡献！</p>
+
+    <footer>
+        <p>powered by <a href="http://github.com/cloudhead/less.js">LESS</a> and <a href="http://github.com/cloudhead/hiless">hiless</a></p>
+    </footer>
+  </div>
+</section>
+
+    </section>
+    <a href="http://github.com/cloudhead/less.js">
+      <img style="position: absolute; z-index: 5; top: 0; right: 0; border: 0;"
+           src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
+           alt="Fork me on GitHub" />
+    </a>
+    <script src="./js/hiless.js"></script>
+    <script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../projects.js"></script>
+
+  </body>
+</html>
+

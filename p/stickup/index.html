@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="stickUp 是一个jQuery插件，它能让页面上的任何一个元素固定在窗口或屏幕的顶部。一般用于将菜单或导航条固定在页面顶部。">
+    <meta name="author" content="Liran Cohen">
+    <meta name="translation" content="Bootstrap中文网">
+
+    <title>stickUp - 一个 jQuery 插件</title>
+
+    <!-- Bootstrap & Snippet plugin core CSS -->
+    <link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="stickup.css" rel="stylesheet">  
+    <link rel="image_src" href="http://lirancohen.github.io/stickUp/images/stickUp.png" / >  
+  </head>
+  <body>
+    <!-- START THE COVER -->
+    <div id="home" class="carousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="container">
+            <div class="carousel-caption">
+             	<img src="images/stickUp.png"> 
+				<h1>stickUp</h1>
+              <h3>一个 jQuery 插件</h4>
+              <p>这是一个简单的jQuery插件，它能让页面目标元素 <i>“固定”</i> 在浏览器窗口的顶部，即便页面在滚动，目标元素仍然能出现在设定的位置。此插件可以在多页面的网站上工作，也能在单页面上面实现导航功能。滚动当前页面看看导航条的效果吧。</p>
+              <p><a class="btn btn-large btn-success" href="http://github.com/LiranCohen/stickUp"><b>Visit GitHub</b></a></p>
+            </div>
+          </div>
+        </div>
+    </div><!-- END COVER -->
+
+    <!-- START THE NAVBAR -->
+    <div class="navbar-wrapper">
+      <div class="container">
+      <div class="navwrapper">
+        <div class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">stickUp</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="menuItem active"><a href="#home">首页</a></li>
+                <li class="menuItem"><a href="#features">特色</a></li>
+                <li class="menuItem"><a href="#updates">更新记录</a></li>
+                <li class="menuItem"><a href="#installation">安装</a></li>
+                <li class="menuItem"><a href="#one-pager">单页导航</a></li>
+                <li class="menuItem"><a href="#extras">额外参数</a></li>
+                <li class="menuItem"><a href="#wordpress">Wordpress</a></li>
+                <li class="menuItem"><a href="#contact">联系我们</a></li>    
+              </ul>
+            </div>
+          </div>
+        </div> 
+      </div><!-- End Navbar -->
+      
+      </div>
+    </div> <!-- END NAVBAR -->
+
+    <!-- START THE CONTENT -->
+    <div id='contents'>  
+
+      <!-- START THE FEATURES -->   
+      <div id="features" class="featurette container marketing">
+        <center><h4 style='margin-bottom:0px;margin-top:20px;'>by <b>Liran Cohen</b></h4>
+        <h5 style='margin-top:5px;'><mute>v0.5.7 BETA</mute></h5></center>
+        <!-- Three columns of text -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="images/simple.png">
+            <h2>集成简单</h2>
+            <p><b>stickUp</b> 是一个 jQuery 插件，可以在任何页面与jQuery协同工作。有了stickUp，当用户向下拖动页面时，你仍然可以让<i>任何</i>页面元素、在<i>任何</i>页面，固定在浏览器窗口的顶部。这对于导航菜单、logo或联系信息等你希望用户一直看到的信息非常有帮助。</p>
+            <p><a class="btn btn-default" href="#installation">详细内容 &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img src="images/onepager.png">
+            <h2>单页导航</h2>
+            <p>虽然 <b>stickUp</b> 被设计为在任何类型的网站页面都能工作 ，但是其设计初衷是作为 <i>单页导航</i>。通过使用CSS可以控制导航菜单上的每个条目随着当前内容的改变而被高亮显示。</p>
+            <p><a class="btn btn-default" href="#one-pager">详细信息 &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img src="images/opensource.png">
+            <h2>开源</h2>
+            <p>LGPL开源软件协议是由开源软件基金发布的。LGPL允许开发者和公司使用并集成LGPL软件到自己的软件中，不需要开放自己的私有代码部分。</p>
+            <p><a class="btn btn-default" href="http://www.gnu.org/licenses/lgpl.html">详细信息 &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div> <!-- END FEATURES -->
+
+      <!-- START THE UPDATES -->
+      <div id="updates" class="row featurette">
+        <div class="col-lg-12">
+          <h2 class="featurette-heading">更新记录</h2>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10">
+          <h3>Beta 版发布！ <small><b><i>Nov 1st, 2013</i></b></small></h3>
+          <p>The first version of the <b><i>stickUp</i></b> jQuery plugin has oficially been launched. This is still in Beta and there may be a few bugs, but they are will get sorted out in the coming weeks. Pleaes contact me if you experience any troubles. Check back often for updates on new features.
+          </p>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10">
+          <h3>"One Pager" anchor functionality. <small><b><i>Oct 31st, 2013</i></b></small></h3>
+          <p>Decided to add anchor functionality so that as certain sections of a 'One Pager' style website, like this one, could trigger a CSS change as they're scrolled into view.  That way your users know where they are while they're scrolling through content.  More options are coming for this in the future.
+          </p>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10">
+          <h3>In need of Margin... <small><b><i>Oct 30th, 2013</i></b></small></h3>
+          <p>When I initially made the plugin the goal was to make the element stick to the very top, but after deciding to make an official example page for it I realizd that I loved the look of a floating plugin.  So I added a little feature called <b><i>marginTop</i></b> to the mix.  This allows the element to be caught by it's margin rather than when it hits the top of the page.
+          </p>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10">
+          <h3>stickUp is Alive! <small><b><i>Oct 29th, 2013</i></b></small></h3>
+          <p>I've decided to create a plugin out of necessity.  There are plenty of "sticky nav" jQuery plugins available out there, but none of them seem to work as smoothly as I'd like.  I decided to create my own and out of that stickUp was born! It's not perfect and has it's kinks, but they will be worked out over the coming weeks.
+          </p>
+        </div>
+      </div> <!-- END UPDATES -->
+
+      <!-- START THE INSTALLATION -->
+      <div id="installation" class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">安装指南<br> <span class="text-muted">Made simple.</span></h2>
+          <p class="lead">下载或从GitHub上面可控stickUp项目。解压到项目目录。请确保你已经正确引入了jQuery。如果需要了解jQuery，请参考<a href="http://learn.jquery.com/about-jquery/how-jquery-works/">jQuery 是如何工作的</a>。</p>
+          <p class="col-lg-offset-1"><a class="btn btn-large btn-primary" href="http://github.com/LiranCohen/stickUp">Visit GitHub</a><br><br></p>
+          <p class="lead">现在就可以将stickUp所包含的的javascript文件加载到你的页面中了。拷贝下面的代码，粘贴到页面底部。务必确保javascript文件的路径正确无误。
+          </p>
+          <xmp>
+            <script src="js/stickUp.min.js"></script>
+          </xmp>
+          <p class="lead">接下来，将下面的代码拷贝粘贴到页面底部，并且放到前面引入的stickUp文件下面。或者，你也可以将下面的代码放倒已经存在的javascript文件中（这个文件也必须在stickUp文件下面）。将 <i>'.navbar-wrapper'</i> 替换为目标元素的class名称。
+          </p>
+          <xmp>
+            <script type="text/javascript">
+              //initiating jQuery
+              jQuery(function($) {
+                $(document).ready( function() {
+                  //enabling stickUp on the '.navbar-wrapper' class
+                  $('.navbar-wrapper').stickUp();
+                });
+              });
+
+            </script>
+          </xmp>
+          <p class="lead">就这么简单！</p>  
+        </div>
+        <div class="col-md-5">
+        </div>
+      </div>  <!-- END INSTALLATION -->
+
+      <!-- START THE ONE-PAGER -->
+      <div id="one-pager" class="row featurette">
+        <div class="col-md-5">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">“单页”导航<span class="text-muted"><br>自己试试吧</span></h2>
+          <p class="lead">如果你的页面布局为单页面导航，并希望导航条一直固定在顶部，让用户随时知道自己所处的位置，只需按照下面的步骤照着做就能实现。</p>
+          <p class="lead">
+            <b>第一步，</b> 收集页面上所有将要作为锚点的元素。<br>
+          </p>
+          <p class="lead">
+            <small><i>如果这些元素还没有被赋予 <b>"id="</b> 属性，请为其设置好。</i></small>
+          </p>
+          <p class="lead">
+            <b>接下来，</b> 修改 <i>stickUp</i> 插件的引用代码如下：
+          </p>
+          <xmp>
+            <script type="text/javascript">
+              //initiating jQuery  
+              jQuery(function($) {
+                $(document).ready( function() {
+                  //为 '.navbar-wrapper' class 启用stickUp插件
+                  $('.navbar-wrapper').stickUp({
+                                parts: {
+                                  0:'home',
+                                  1:'features',
+                                  2: 'news',
+                                  3: 'installation',
+                                  4: 'one-pager',
+                                  5: 'extras',
+                                  6: 'wordpress',
+                                  7: 'contact'
+                                },
+                                itemClass: 'menuItem',
+                                itemHover: 'active'
+                              });
+                });
+              });
+            
+            </script>
+          </xmp>
+          <p class="lead">
+            **上面的数字标注的是元素出现的顺序。
+            <br><br>
+            <b>itemClass:</b> 是每个导航菜单条目所对应的的class。<br>
+            <b>itemHover:</b> 是当菜单条目处于激活状态时所被赋予的class，用于修改其外观。
+          </p>
+        </div>
+      </div>  <!-- END ONE-PAGER -->
+
+      <!-- START THE EXTRAS -->
+      <div id="extras" class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">额外参数 <br><span class="text-muted">附加配置信息</span></h2>
+          <p class="lead">
+            我正在继续完善这个插件。如果有建议或需求，请告诉我。
+          </p>
+          <p class="lead">
+            stickUp自己使用到了两个class，需要注意一下。<br><br>
+            <b>.stuckMenu</b>: 初始化插件时，这个class被添加到目标元素。<br>
+            <b>.isStuck</b>: 当stickUp对目标元素起作用时，此class将被添加到目标元素。反之则被移除。
+          </p>
+          <p class="lead">
+            目前stickUp仅提供了下面这一个而外参数，将来会加入更多。<br><br>
+            <b>marginTop</b>:
+            此参数将为目标元素设置上边距。可选值为 <i>'auto'</i>，这时，将会自动获取目标元素的上边距并应用到目标元素上；还可以设置为具体的高度。下面就是本页面导航条所用的代码。
+          </p>
+          <p>
+            <xmp>
+              <script type="text/javascript">
+                //initializing jQuery
+                jQuery(function($) {
+                  $(document).ready( function() {
+                    //enabling stickUp on the '.navbar-wrapper' class
+                    $('.navbar-wrapper').stickUp({
+                      //enabling marginTop with the 'auto' setting 
+                      marginTop: 'auto'
+                    });
+                });
+              });
+              
+              </script>            
+            </xmp>
+          </p>
+          <p class="lead">
+            其工作过程为，stickUp插件自动获取 '.navbar-wrapper' 的上边距值，并在滚动过程中赋予目标元素。
+          </p>
+        </div>
+        <div class="col-md-5">
+        </div>
+      </div> <!-- END EXTRAS -->
+
+      <!-- START THE WORDPRESS -->
+      <div id="wordpress" class="row featurette">
+        <div class="col-md-5">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Wordpress.<br><span class="text-muted">Adding functionality.</span></h2>
+          <p class="lead">
+            将 stickUp 集成到 Wordpress 也是很简单的。另外，我还在为Wordpress开发一个单独版本的stickUp插件，它能更容易的集成到后台并包含更多热性。
+          </p>
+          <p class="lead">
+            其实和任何页面集成stickUp类似，下面我们再详细说一下。
+          </p>
+          <p class="lead">
+            <b>首先</b>，必须下载stickUp文件<b><i>'stickUp.min.js'</i></b>并将其放到当前主题目录的<b><i>'js'</i></b>目录下。如果不存在，请自行创建。stickUp文件可以从GitHub上面获取。
+          </p>
+          <p class="col-lg-offset-1"><a class="btn btn-large btn-success" href="http://github.com/LiranCohen/stickUp">Visit GitHub</a><br><br></p>
+          <p>
+          <p class="lead">
+            <b>接下来，</b>将stickUp文件集成到Wordpress中。在当前主题目录下，找到并打开包含页脚的文件，一般是<i>'footer.php'</i> 文件，或者起同样作用的文件，这就要看你当前所用的主题是如何命名的。<br><br>
+            在此文件底部找到 <b><i>'&#60;/body&#62;'</i></b> 标签，在 <b><i>'&#60;?php wp_footer(); ?&#62;'</i></b> 标签下面插入如下代码： 
+          </p>
+          <xmp>
+            <script src="<?php 
+              echo get_stylesheet_directory_uri(); 
+            ?>/js/stickUp.min.js"></script>
+          </xmp>
+          <p class="lead">
+            <b>最后，</b> 加入以下javascript代码。我们以Wordpress默认主题 <i>'Twenty Thirteen'</i> 为例。<br><br>
+            在上一步我们所加入的代码后面加入下面的代码片段：
+          </p>
+          <xmp>
+            <script type="text/javascript">
+              //initiating jQuery
+              jQuery(function($) {
+                $(document).ready( function() {
+                  //目标元素ID -- '#navbar' 
+                  $('#navbar').stickUp();
+                });
+              });
+
+            </script>
+          </xmp>
+          <p class="lead">
+            <b>完成！</b> That element is now a sticky element.  你还可以在Wordpress上探索此插件的其它特性，请认真阅读 <a href="#one-pager">One Pager</a> 和 <a href="#extras">Extras</a> 段落。<br><br>
+            **尤其注意<i>'marginTop'</i> 属性，这个属性用来给 Wordpress 工具条添加上边距，如果没有设置正确，可能会引起冲突。
+          </p>
+        </div>
+      </div> <!-- END WORDPRESS -->
+
+      <!-- START THE FOOTER -->
+      <footer id="contact" class="row featurette">
+        <div class="row">
+        <br>
+          <div class="text-center col-sm-12 col-lg-12">
+            <h2 class="featurette-heading">Stay in touch.<br><span class='text-muted'>Feel free to follow.</span></h2>
+            <br><br>   
+          </div>
+          <div class="col-12 col-lg-12">
+            <div class="col-lg-offset-2 col-lg-2 text-center">
+              <a href="http://github.com/LiranCohen/stickUp"><img src="images/icons/Github.png"></a>
+              <h3>GitHub</h3>
+            </div>
+            <div class="col-lg-2 text-center">
+              <a href="http://www.twitter.com/itsLiran"><img src="images/icons/Twitter.png"></a>
+              <h3>Twitter</h3>
+            </div>          
+            <div class="col-lg-2 text-center">
+              <a href="http://plus.google.com/+LiranCohen"><img src="images/icons/Google.png"></a>
+              <h3>Google+</h3>
+            </div>
+            <div class="col-lg-2 text-center">
+              <a target="_blank" href="mailto:lirancohen@me.com?subject=stickUp%20Contact%20from%20Website"><img src="images/icons/Mail.png"></a>
+              <h3>E-Mail</h3>
+            </div>            
+          </div>
+        </div>   
+        <div class="row">
+          <span class="text-center"><h3 class="featurette-heading">stickUp</h3><h4>一个 jQuery 插件</h4></span><br>
+          <div class="text-center col-sm-12 col-lg-12">
+            <p>© 2013 Liran Cohen | This page was proudly built with <a href="http://www.getbootstrap.com">Twitter's Bootstrap</a></p>
+            <p>stickUp 由<a href="http://www.bootcss.com/">Bootstrap中文网</a>翻译整理</p>
+          </div>
+        </div>
+      </footer> <!-- END FOOTER -->
+
+    </div> <!-- END CONTENT -->
+
+
+    <!-- Bootstrap & Plugins core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    <!-- ### IMPORTANT ### stickUp javascript file -->
+    <!-- ######################################### --> 
+    <script src="js/stickUp.min.js"></script>
+    <!-- ######################################### -->
+
+    <!-- ### IMPORTANT ### stickUp options in use -->
+    <!-- ######################################## -->
+    <script type="text/javascript">
+      jQuery(function($) {
+        $(document).ready( function() {
+          $('.navbar-wrapper').stickUp({
+                        parts: {
+                          0:'home',
+                          1:'features',
+                          2: 'updates',
+                          3: 'installation',
+                          4: 'one-pager',
+                          5: 'extras',
+                          6: 'wordpress',
+                          7: 'contact'
+                        },
+                        itemClass: 'menuItem',
+                        itemHover: 'active',
+                        topMargin: 'auto'
+                      });
+        });
+      });
+    </script>
+    <script src="/p/projects.js"></script>
+    <!-- ######################################## -->
+  </body>
+</html>

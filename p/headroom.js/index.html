@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+    <title>Headroom.js</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="assets/styles/main.css?v=1">
+    <meta name="description" content="Headroom.js 是一个轻量级、纯 JS 组件，用来隐藏或展现页面上的元素，为你的页面留下更多展示内容的空间。">
+</head>
+<body>
+
+<header id="header" class="header header--fixed hide-from-print" role="banner">
+    <div class="container" >
+    
+        <nav id="nav" class="nav-wrapper" role="navigation">
+            <ul class="nav nav--main">
+                <li class="nav__item ">
+                    <a class="header__link subdued" href="https://www.github.com/WickyNilliams/headroom.js">
+                        <span aria-hidden="true" class="icon icon--github"></span>
+                        <span class="complimentary push--left">GitHub</span>
+                    </a>
+                </li>
+                <li class="nav__item ">
+                    <a class="header__link subdued" href="http://www.twitter.com/WickyNilliams">
+                        <span aria-hidden="true" class="icon icon--twitter"></span>
+                        <span class="complimentary push--left">@WickyNilliams</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <a href="http://wicky.nillia.ms/headroom.js/" class="brand header__link">
+            <b class="brand__forename">Headroom</b><b class="brand__surname">.js</b>
+        </a>
+    </div>
+</header>
+
+<article>
+<header class="feature">
+    <div class="container container--wide feature-title">
+        <h1 class="feature-title__title headroom-title">Headroom.js</h1>
+        <p class="feature-title__subtitle">为页面顶部多留些空间。在不需要页头时将其隐藏。</p>
+    </div>
+</header>
+
+<div class="container block main" role="main">
+
+<h2>下载</h2>
+<div class="downloads" style="margin-bottom:1em">
+    <div class="grid">
+        <div class="grid__item one-half"><a class="btn btn--secondary btn--full" href="https://raw.github.com/WickyNilliams/headroom.js/master/dist/headroom.js">Development <span class="complimentary subdued">(3.7kB)</span></a></div>
+        <div class="grid__item one-half"><a class="btn btn--secondary btn--full" href="https://raw.github.com/WickyNilliams/headroom.js/master/dist/headroom.min.js">Production <span class="complimentary subdued">(1.7kB)</span></a></div>
+    </div>
+</div>
+
+<h2>Headroom.js 是什么？</h2>
+
+<p>Headroom.js 是一个轻量级、高性能的JS小工具（不依赖任何工具库！），它能在页面滚动时做出响应。此页面顶部的导航条就是一个鲜活的案例，当页面向下滚动时，导航条消失，当页面向上滚动时，导航条就出现了。</p>
+
+<h3>Headroom.js 有什么用？</h3>
+
+<p>固定页头（导航条）可以方便用户在各个页面之间切换。但是这也会带来些问题&hellip; </p>
+
+<p>大屏幕一般都是宽度大于高度的，也就是说屏幕高度要少一些。固定页头会占用一部分本来可以用于展示内容的区域。小屏幕一般是高度较大，但是别忘了，屏幕本来就小，页头再占用一部分的话，屏幕可用于展示内容的区域当然还是少。</p>
+
+<p>Headroom.js 能帮你把不需要的页面元素在合适的时间展示出来，让用户花更多时间关注你页面上的内容。</p>
+
+<h3>工作原理</h3>
+
+<p>简单来说，headroom.js 只是为需要响应滚动事件的页面元素增加或删除一个CSS class：</p>
+
+<pre class="language-markup"><code>&lt;!-- 初始状态 --&gt;
+&lt;header class="headroom"&gt;
+
+&lt;!-- 向下滚动时 --&gt;
+&lt;header class="headroom headroom--unpinned"&gt;
+
+&lt;!-- 向上滚动时 --&gt;
+&lt;header class="headroom headroom--pinned"&gt;
+</code></pre>
+
+<p>通过CSS class的设置，事情变得简单了。所有的控制权就交回到了你的手中，当页面向上或向下滚动时，你就可以通过设置CSS样式来做出自己需要的变化了。</p>
+
+<h2>用法</h2>
+
+<p>使用 headroom.js 是很简单的。它提供了简单的 JS API，另外，还可以作为 jQuery/Zepto 插件使用。</p>
+
+<h3>纯JS调用方式</h3>
+
+<pre class="language-javascript"><code>// 获取页面元素
+var myElement = document.querySelector("header");
+// 创建 Headroom 对象，将页面元素传递进去
+var headroom  = new Headroom(myElement);
+// 初始化
+headroom.init(); 
+</code></pre>
+
+<h3>以 jQuery/Zepto 插件形式调用</h3>
+
+<pre class="language-javascript"><code>// 是不是很简单！
+// 注意： init() 默认在插件内部被调用了
+$("#header").headroom();
+</code></pre>
+
+<p>插件还提供了一个 data-* API ：</p>
+
+<pre class="language-markup"><code>&lt;!-- selects $(&quot;[data-headroom]&quot;) --&gt;
+&lt;header data-headroom&gt;
+</code></pre>
+
+<p>注意：为了兼容，Zepto 的<a href="https://github.com/madrobby/zepto#zepto-modules" title="https://github.com/madrobby/zepto#zepto-modules">data module</a> 也需要引入。</p>
+
+<h3>参数</h3>
+
+<p>Headroom.js 还能接受一个参数对象，用以改变其行为。你可以看一下 Headroom.js 源码中对 <code>Headroom.options</code> 的定义。其 options 对象的结构如下：</p>
+
+<pre class="language-javascript"><code>{
+    // 在元素没有固定之前，垂直方向的偏移量（以px为单位）
+    offset : 0,
+    // scroll tolerance in px before state changes
+    tolerance : 0,
+    // 对于每个状态都可以自定义css classes 
+    classes : {
+        // 当元素初始化后所设置的class
+        initial : "headroom",
+        // 向上滚动时设置的class
+        pinned : "headroom--pinned",
+        // 向下滚动时所设置的class
+        unpinned : "headroom--unpinned"
+    }
+}
+</code></pre>
+
+    <h2>案例</h2>
+    <p>
+        在 <a href="playroom/">headroom.js playroom</a> 页面可以看到更多使用案例。你甚至还可以调整Headroom.js 的参数来观察不同的效果。
+    </p>
+
+    <h2>License</h2>
+    <p>
+        Licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.
+    </p>
+
+  
+
+
+    </div>
+    <a class="btt btn btn--plain hide-from-print" href="#" id="btt">Top <i class="icon icon--up"></i></a>
+</article>
+
+<script src="assets/scripts/main.js?v=1"></script>
+<script>
+(function() {
+    var header = new Headroom(document.querySelector("#header"), {
+        tolerance: 5,
+        offset : 205,
+        classes: {
+          initial: "animated",
+          pinned: "slideDown",
+          unpinned: "slideUp"
+        }
+    });
+    header.init();
+
+    var bttHeadroom = new Headroom(document.getElementById("btt"), {
+        tolerance : 0,
+        offset : 500,
+        classes : {
+            initial : "slide",
+            pinned : "slide--reset",
+            unpinned : "slide--down"
+        }
+    });
+    bttHeadroom.init();
+}());
+</script>
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="/p/projects.js"></script>
+</body>
+</html>

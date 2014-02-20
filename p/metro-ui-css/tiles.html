@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>Tiles · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div class="page secondary">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>Tiles<small>案例</small></h1>
+                <a class="back-button big page-back" href="/"></a>
+            </div>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+                <div class="grid">
+                    <div class="row">
+                        <div class="span10">
+                            <h2>Windows 8 开始页面</h2>
+                            <p>
+                                <a href="windows8start.html">Demo page</a>
+                            </p>
+
+                            <h2>基本信息</h2>
+                            <p>
+                                Tiles是你应用程序子模块的表现方式。你的内容显示在Tile中，理想状态下这些东西是可以定期更新的，特别是你的内容是实时的，这样更新可以与用户更好的交流。 Tiles 可以文本和图像的组合一起显示,也可以以一枚徽章的状态来显示。
+                                Tile是一个区块，可以放在任何容器内。
+                            </p>
+
+                            <p>Tile的默认尺寸大小是150x150像素。 Tile尺寸也可以添加子类来增加更多的对象: <code>.double(-vertical)</code>, <code>.triple(-vertical)</code>, <code>.quadro(-vertical)</code>.</p>
+
+                            <p>可以对Tile设置已选择状态："selected"。你也可以通过添加类名<code>.bg-color-*</code>来改变Tile的背景色。</p>
+
+                            <h3>Tile定义:</h3>
+
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile"</span><span class="tag">&gt;&lt;/div&gt;</span></li><li class="L1"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile double"</span><span class="tag">&gt;&lt;/div&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile selected"</span><span class="tag">&gt;&lt;/div&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile bg-color-orange"</span><span class="tag">&gt;&lt;/div&gt;</span></li></ol></pre>
+                            <div class="clearfix">
+                                <div class="tile"></div>
+                                <div class="tile double"></div>
+                                <div class="tile selected"></div>
+                                <div class="tile bg-color-orange"></div>
+                            </div>
+
+                            <h3>Tile内容</h3>
+                            <p>Tile可以使用类名<code>.tile-content</code>将内容放置在子容器中。类名<code>.tile-content</code>顶部和底部有10px的内距，距左边和右边有15px的内距。</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile-content"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><small><span class="pln">...content here...</span></small></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                            <div class="clearfix">
+                                <div class="tile double bg-color-green">
+                                    <div class="tile-content">
+                                        <h2>mattberg@live.com</h2>
+                                        <h5>Re: Wedding Annoucement!</h5>
+                                        <p>
+                                            Congratulations! I'm really excited to celebrate with you all. Thanks for...
+                                        </p>
+                                    </div>
+                                    <div class="brand">
+                                        <div class="badge">12</div>
+                                        <img src="images/Mail128.png" class="icon">
+                                    </div>
+                                </div>
+                                <div class="tile bg-color-red icon">
+                                    <b class="check"></b>
+                                    <div class="tile-content">
+                                        <img src="images/Market128.png">
+                                    </div>
+                                    <div class="brand">
+                                        <span class="name">Store</span>
+                                        <span class="badge">6</span>
+                                    </div>
+                                </div>
+                                <div class="tile double bg-color-blueDark">
+                                    <div class="tile-content">
+                                        <img class="place-right" src="images/michael.jpg">
+                                        <h4 style="margin-bottom: 5px;">michael_angiulo</h4>
+                                        <p>
+                                            I just saw Thor last night. It was awesome! I think you'd love it.
+                                        </p><h5>RT @julie_green</h5>
+                                        <p></p>
+                                    </div>
+                                    <div class="brand">
+                                        <span class="name">Tweet@rama</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Tiles内容内置的子类</h3>
+                            <p>Tiles内容在子块可使用的类名: <code>.icon</code>, <code>.image</code>, <code>.image-set</code>, <code>.image-slider</code>.</p>
+                            <div class="grid">
+                                <div class="row">
+                                    <div class="span2">
+                                        <h5>字类名<code>.icon</code></h5>
+                                        <div class="tile icon">
+                                            <div class="tile-content">
+                                                <img src="images/armor.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span4">
+                                        <h5>子类名<code>.image</code></h5>
+                                        <div class="tile double image">
+                                            <div class="tile-content">
+                                                <img alt="" src="images/5.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="span4">
+                                        <h5>子类名<code>.image-set</code></h5>
+                                        <div class="tile double image-set">
+                                            <div class="tile-content">
+                                                <img alt="" src="images/1.jpg">
+                                            </div>
+                                            <div class="tile-content">
+                                                <img alt="" src="images/2.jpg">
+                                            </div>
+                                            <div class="tile-content">
+                                                <img alt="" src="images/3.jpg">
+                                            </div>
+                                            <div class="tile-content">
+                                                <img alt="" src="images/4.jpg">
+                                            </div>
+                                            <div class="tile-content">
+                                                <img alt="" src="images/5.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile icon(image)"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile-content"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">    ------------</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile image-set"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile-content"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">            </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L0"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile-content"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">            </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile-content"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">            </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L5"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile-content"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">            </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L8"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile-content"</span><span class="tag">&gt;</span></li><li class="L0"><span class="pln">            </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">    ------------</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile image-slider"</span><span class="pln"> </span><span class="atn">data-role</span><span class="pun">=</span><span class="atv">"image-slider"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile-content"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">            </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L7"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">        ...</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile-content"</span><span class="tag">&gt;</span></li><li class="L0"><span class="pln">            </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                                <h2 id="tile-slider-plugin">Tile滑块插件</h2>
+                                <p>
+                                    使用<code>tile-slider</code>，你需要在你的页面<code>&lt;/head&gt;</code> 前加上<code>tile-slider.js</code>并在Title对像中添加自定义属性<code>data-role="tile-slider"</code> 。
+                                    也可以为Tile对像设置特定的参数，例如：<code>direction</code>, <code>duration</code> 和<code>period</code>，<code>data-param-direction(duration, period)</code>            </p>
+                                <div data-role="tile-slider" class="tile double image-slider">
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: -57.7693px;">
+                                        <img alt="" src="images/1.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: 92.2307px;">
+                                        <img alt="" src="images/2.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: -150px;">
+                                        <img alt="" src="images/3.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: -150px;">
+                                        <img alt="" src="images/4.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: -150px;">
+                                        <img alt="" src="images/5.jpg">
+                                    </div>
+                                </div>
+
+                                <div data-param-period="3000" data-param-direction="left" data-role="tile-slider" class="tile double image-slider">
+                                    <div class="tile-content" style="position: absolute; left: -310px; top: 0px;">
+                                        <img alt="" src="images/1.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: -310px; top: 0px;">
+                                        <img alt="" src="images/2.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: -310px; top: 0px;">
+                                        <img alt="" src="images/3.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: -113.548px; top: 0px;">
+                                        <img alt="" src="images/4.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 196.452px; top: 0px;">
+                                        <img alt="" src="images/5.jpg">
+                                    </div>
+                                </div>
+
+                                <div data-param-period="3000" data-param-direction="down" data-role="tile-slider" class="tile double image-slider">
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: 150px;">
+                                        <img alt="" src="images/1.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: 150px;">
+                                        <img alt="" src="images/2.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: 150px;">
+                                        <img alt="" src="images/3.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: 47.4342px;">
+                                        <img alt="" src="images/4.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: -102.566px;">
+                                        <img alt="" src="images/5.jpg">
+                                    </div>
+                                </div>
+
+                                <div data-param-duration="3000" data-param-period="3000" data-param-direction="right" data-role="tile-slider" class="tile double image-slider">
+                                    <div class="tile-content" style="position: absolute; left: 310px; top: 0px;">
+                                        <img alt="" src="images/1.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 310px; top: 0px;">
+                                        <img alt="" src="images/2.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 310px; top: 0px;">
+                                        <img alt="" src="images/3.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: 0px;">
+                                        <img alt="" src="images/4.jpg">
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: -310px; top: 0px;">
+                                        <img alt="" src="images/5.jpg">
+                                    </div>
+                                </div>
+
+                                <div data-param-period="3000" data-role="tile-slider" class="tile double bg-color-green">
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: 150px;">
+                                        <h2>mattberg@live.com</h2>
+                                        <h5>Re: Wedding Annoucement!</h5>
+                                        <p>
+                                            Congratulations! I'm really excited to celebrate with you all. Thanks for...
+                                        </p>
+                                    </div>
+                                    <div class="tile-content" style="position: absolute; left: 0px; top: 0px;">
+                                        <h2>tina@live.com</h2>
+                                        <h5>Re: Wedding Annoucement!</h5>
+                                        <p>
+                                            Huh! Waw!!! I'm really excited to celebrate with you all. Thanks for...
+                                        </p>
+                                    </div>
+                                    <div class="brand">
+                                        <div class="badge">12</div>
+                                        <img src="images/Mail128.png" class="icon">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <p>
+                                默认参数值:
+                                </p><ul>
+                                    <li>Duration - 1000ms </li>
+                                    <li>Period - 2000ms</li>
+                                    <li>Direction - "up"</li>
+                                </ul>
+                            <p></p>
+
+                            <h3>Tile状态</h3>
+                            <p>Tile 状态(品牌信息)可以使用类名<code>.brand</code> or <code>.tile-status</code>放在子容器之中。 Tile 状态也可以修改背景颜色，例如使用类名<code>.bg-color-* </code></p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"brand"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><small><span class="pln">...status content here...</span></small></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                            <h3>Tile 状态 &gt; 徽章</h3>
+                            <p>
+                                一个徽章可以显示的是1-99的数字也可以是图形。徽章都是定位在Tile区块的右下角位置。
+                                Metro UI CSS 支持Windows 8内置的主要徽章: <span class="fg-color-blue">activity, alert, available, away, busy, newMessage, paused, playing, unavailable, error and attention</span>。默认徽章的背景色是蓝色，但我们也可以修改的，例如，使用类名<code>.bg-color-*</code>.
+                            </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"brand"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"badge activity"</span><span class="tag">&gt;&lt;/div&gt;</span></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                            <div class="clearfix">
+                                <div class="tile">
+                                    <div class="tile-status">
+                                        <div class="badge bg-color-blue">99</div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="tile-status">
+                                        <div class="badge activity"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge alert"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge available"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge away"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge busy"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge newMessage"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge paused"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge playing"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge unavailable"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge error"></div>
+                                    </div>
+                                </div>
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge attention"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Tile 状态 &gt;品牌信息</h3>
+                            <p>
+                                品牌信息可以显示品牌名称或者代表品牌信息的图片。品牌信息定位在Tile区块的左下角位置。
+                            </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"brand"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"name"</span><span class="tag">&gt;</span><span class="pln">Name</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tile"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"brand"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon"</span><span class="tag">&gt;</span><span class="pln"> </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"> </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                            <div class="clearfix">
+                                <div class="tile">
+                                    <div class="brand">
+                                        <div class="badge">10</div>
+                                        <div class="name">Mail</div>
+                                    </div>
+                                </div>
+                                <div class="tile double bg-color-green">
+                                    <div class="brand">
+                                        <div class="badge">12</div>
+                                        <img src="images/Mail128.png" class="icon">
+                                    </div>
+                                </div>
+                                <div class="tile double bg-color-pink">
+                                    <div class="brand">
+                                        <div class="name">Photos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tiles clearfix">
+                    <h3>使用Metro UI CSS制作的Tile案例</h3>
+                    <div class="tile image">
+                        <div class="tile-content">
+                            <img alt="" src="images/myface.jpg">
+                        </div>
+                    </div>
+
+                    <div class="tile icon">
+                        <div class="tile-content">
+                            <img src="images/Mail128.png">
+                        </div>
+                        <div class="brand">
+                            <div class="badge">10</div>
+                            <div class="name">Mail</div>
+                        </div>
+                    </div>
+
+                    <div class="tile bg-color-orangeDark icon selected">
+                        <b class="check"></b>
+                        <div class="tile-content">
+                            <img alt="" src="images/Video128.png">
+                        </div>
+                        <div class="brand">
+                            <span class="name">Video</span>
+                        </div>
+                    </div>
+
+                    <div class="tile double image">
+                        <div class="tile-content">
+                            <img alt="" src="images/5.jpg">
+                        </div>
+                        <div class="brand">
+                            <span class="name">Pictures</span>
+                            <div class="badge bg-color-orange">5</div>
+                        </div>
+                    </div>
+
+                    <div class="tile double-vertical bg-color-yellow icon">
+                        <div class="tile-content">
+                            <img src="images/Calendar128.png">
+                        </div>
+                        <div class="brand">
+                            <span class="name">Calendar</span>
+                        </div>
+                    </div>
+
+                    <div class="tile bg-color-green icon selected">
+                        <b class="check"></b>
+                        <div class="tile-content">
+                            <img src="images/Market128.png">
+                        </div>
+                        <div class="brand">
+                            <span class="name">Store</span>
+                            <span class="badge">6</span>
+                        </div>
+                    </div>
+
+                    <div class="tile bg-color-red icon selected">
+                        <div class="tile-content">
+                            <img alt="" src="images/Music128.png">
+                        </div>
+                        <div class="brand">
+                            <span class="name">Music</span>
+                        </div>
+                    </div>
+
+                    <div class="tile double bg-color-blueDark">
+                        <div class="tile-content">
+                            <img class="place-left" src="images/michael.jpg">
+                            <h3 style="margin-bottom: 5px;">michael_angiulo</h3>
+                            <p>
+                                I just saw Thor last night. It was awesome! I think you'd love it.
+                                </p><h5>RT @julie_green</h5>
+                            <p></p>
+                        </div>
+                        <div class="brand">
+                            <span class="name">Tweet@rama</span>
+                        </div>
+                    </div>
+
+                    <div class="tile bg-color-darken icon">
+                        <div class="tile-content">
+                            <img alt="" src="images/YouTube128.png">
+                        </div>
+                        <div class="brand">
+                            <span class="name">YouTube</span>
+                        </div>
+                    </div>
+
+                    <div class="tile icon">
+                        <div class="tile-content">
+                            <img src="images/excel2013icon.png">
+                        </div>
+                        <div class="brand">
+                            <span class="name">Excel 2013</span>
+                        </div>
+                    </div>
+
+                    <div class="tile double bg-color-green">
+                        <div class="tile-content">
+                            <h2>mattberg@live.com</h2>
+                            <h5>Re: Wedding Annoucement!</h5>
+                            <p>
+                                Congratulations! I'm really excited to celebrate with you all. Thanks for...
+                            </p>
+                        </div>
+                        <div class="brand">
+                            <div class="badge">12</div>
+                            <img src="images/Mail128.png" class="icon">
+                        </div>
+                    </div>
+
+                    <div class="tile double image">
+                        <div class="tile-content">
+                            <img alt="" src="images/4.jpg">
+                        </div>
+                        <div class="brand bg-color-orange">
+                            <img src="images/Rss128.png" class="icon">
+                            <p class="text">This is a desert eagle. He is very hungry and angry bird.</p>
+                            <div class="badge">10</div>
+                        </div>
+                    </div>
+
+                    <div class="tile double image-set">
+                        <div class="tile-content">
+                            <img alt="" src="images/1.jpg">
+                        </div>
+                        <div class="tile-content">
+                            <img alt="" src="images/2.jpg">
+                        </div>
+                        <div class="tile-content">
+                            <img alt="" src="images/3.jpg">
+                        </div>
+                        <div class="tile-content">
+                            <img alt="" src="images/4.jpg">
+                        </div>
+                        <div class="tile-content">
+                            <img alt="" src="images/5.jpg">
+                        </div>
+                        <div class="brand">
+                            <span class="name">Photos</span>
+                        </div>
+                    </div>
+
+                    <div class="tile bg-color-blue icon">
+                        <div class="tile-content">
+                            <img src="images/InternetExplorer128.png">
+                        </div>
+                        <div class="brand">
+                            <span class="name">Internet Explorer</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+                <div class="grid">
+                    <div class="row">
+                                            </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>

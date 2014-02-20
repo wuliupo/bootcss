@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7" lang="zh-CN"><![endif]-->
+<!--[if IE 8]><html class="ie ie8" lang="zh-CN"><![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Cikonss | 纯CSS实现的响应式Icon</title>
+	<meta  name="description" content="Cikonss是利用纯CSS技术构建的响应式、跨浏览器的icon">
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<!-- Styles -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700,300">
+	<link rel="stylesheet" href="assets/css/normalize.css" />
+	<link rel="stylesheet" href="assets/css/fonts.css"/>
+	<link rel="stylesheet" href="cikonss.css" />
+	<link rel="stylesheet" href="assets/css/demo.css"/>
+	<!-- Scripts -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+	<![endif]-->
+	<script type="text/javascript" src="assets/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="//use.edgefonts.net/pt-sans-narrow.js"></script>
+</head>
+
+<body class="home">
+
+	<div class="top-bar">
+		<nav>
+			<ul class="navigation">
+				<li class="item-first"><a href="index.html"><span class="icon icon-small"><span class="icon-menu"></span></span>Cikonss</a></li>
+				<li class="menu">
+					<ul>
+						<li class="menu-item"><a href="#preview">预览</a></li>
+						<li class="menu-item"><a href="#usage">用法</a></li>
+						<li class="menu-item"><a href="#examples">案例</a></li>
+						<li class="menu-item"><a href="#about">关于</a></li>
+					</ul>
+				</li>
+			</ul><!-- .navigation -->
+		</nav>
+
+		<ul class="social-links">
+			<li class="item-first"><a href="#"><span aria-hidden="true" class="icon-link"></span></a></li>
+			<li class="menu">
+				<ul>
+					<li class="social-item"><a href="http://twitter.com/zzap_m" target="_blank"><span aria-hidden="true" class="icon-twitter"></span></a></li>
+					<li class="social-item"><a href="http://plus.google.com/u/0/105153442065975119656/posts" target="_blank"><span aria-hidden="true" class="icon-google-plus"></span></a></li>
+					<li class="social-item"><a href="http://github.com/zzap" target="_blank"><span aria-hidden="true" class="icon-github"></span></a></li>
+					<li class="social-item"><a href="http://www.facebook.com/zzapwebdesign" target="_blank"><span aria-hidden="true" class="icon-facebook"></span></a></li>
+				</ul>
+			</li>
+		</ul><!-- .social-links -->
+	</div><!-- .top-bar -->
+
+	<header id="header" class="wrapper header-wrap">
+		<div class="devices">
+			<span class="icon icon-extra-large"><span class="icon-desktop"></span></span>
+			<span class="icon icon-large"><span class="icon-tablet"></span></span>
+			<span class="icon icon-mid"><span class="icon-phone"></span></span>
+		</div><!-- .devices -->
+
+		<div class="hgroup">
+			<h1 class="title">Cikonss 1.0</h1>
+			<h2 class="desc">纯CSS实现的响应式Icon - 兼容IE8+</h2>
+		</div><!-- .hgroup -->
+
+		<div id="action" class="section section-action">
+			<div class="download">
+				<span class="icon icon-small"><span class="icon-download"></span></span>
+				<a href="https://github.com/zzap/Cikonss/archive/master.zip" title="Download Cikonss 1.0">下载</a>
+			</div><!-- .download -->
+			<div class="view-on-github">
+				<a href="https://github.com/zzap/Cikonss" title="View project on GitHub"><span aria-hidden="true" class="icon-github"></span>View on GitHub</a>
+			</div><!-- .view-on-github -->
+		</div><!-- #action.section.section-action -->
+	</header><!-- #header.wrapper.header-wrap -->
+
+	<div id="content" class="wrapper content-wrap">
+		<div id="preview" class="section section-preview">
+			<ul class="first">
+				<li>
+					<span class="icon icon-mid"><span class="icon-home"></span></span>
+					<code>.icon-home</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-arrowRight"></span></span>
+					<code>.icon-arrowRight</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-arrowLeft"></span></span>
+					<code>.icon-arrowLeft</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-arrowDown"></span></span>
+					<code>.icon-arrowDown</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-arrowUp"></span></span>
+					<code>.icon-arrowUp</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-comment"></span></span>
+					<code>.icon-comment</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-comment-text"></span></span>
+					<code>.icon-comment-text</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-mail"></span></span>
+					<code>.icon-mail</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-calendar"></span></span>
+					<code>.icon-calendar</code>
+				</li>
+			</ul>
+			<ul class="second">
+				<li>
+					<span class="icon icon-mid"><span class="icon-plus"></span></span>
+					<code>.icon-plus</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-minus"></span></span>
+					<code>.icon-minus</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-file"></span></span>
+					<code>.icon-file</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-folder"></span></span>
+					<code>.icon-folder</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-tag"></span></span>
+					<code>.icon-tag</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-desktop"></span></span>
+					<code>.icon-desktop</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-tablet"></span></span>
+					<code>.icon-tablet</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-phone"></span></span>
+					<code>.icon-phone</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-menu"></span></span>
+					<code>.icon-menu</code>
+				</li>
+			</ul>
+			<ul class="third">
+				<li>
+					<span class="icon icon-mid"><span class="icon-download"></span></span>
+					<code>.icon-download</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-upload"></span></span>
+					<code>.icon-upload</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-tpl-full"></span></span>
+					<code>.icon-tpl-full</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-tpl-side-r"></span></span>
+					<code>.icon-tpl-side-r</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-tpl-side-l"></span></span>
+					<code>.icon-tpl-side-l</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-list-view"></span></span>
+					<code>.icon-list-view</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-grid-view"></span></span>
+					<code>.icon-grid-view</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-camera"></span></span>
+					<code>.icon-camera</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-image"></span></span>
+					<code>.icon-image</code>
+				</li>
+			</ul>
+			<ul class="fourth">
+				<li>
+					<span class="icon icon-mid"><span class="icon-play"></span></span>
+					<code>.icon-play</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-stop"></span></span>
+					<code>.icon-stop</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-pause"></span></span>
+					<code>.icon-pause</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-forward"></span></span>
+					<code>.icon-forward</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-next"></span></span>
+					<code>.icon-next</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-rewind"></span></span>
+					<code>.icon-rewind</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-prev"></span></span>
+					<code>.icon-prev</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-stats"></span></span>
+					<code>.icon-stats</code>
+				</li>
+			</ul>
+			<ul class="fifth">
+				<li>
+					<span class="icon icon-mid"><span class="icon-battery-empty"></span></span>
+					<code>.icon-battery-empty</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-battery-1_4"></span></span>
+					<code>.icon-battery-1_4</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-battery-half"></span></span>
+					<code>.icon-battery-half</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-battery-3_4"></span></span>
+					<code>.icon-battery-3_4</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-battery-full"></span></span>
+					<code>.icon-battery-full</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-sound-mute"></span></span>
+					<code>.icon-sound-mute</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-sound-normal"></span></span>
+					<code>.icon-sound-normal</code>
+				</li>
+				<li>
+					<span class="icon icon-mid"><span class="icon-sound-loud"></span></span>
+					<code>.icon-sound-loud</code>
+				</li>
+			</ul>
+		</div><!-- #preview.section.section-preview -->
+
+		<div id="usage" class="section section-usage">
+			<h2 class="section-title">用法</h2>
+			<p>在html文件的head标签内容引入 cikonss.css 文件，如下：</p>
+			<p><pre>&lt;link rel="stylesheet" href="cikonss.css" /&gt;</pre></p>
+			<p>现在就可以直接使用了，cikonss共有43个icon，5种尺寸、3种样式。每个icon都是由两个 <code>&lt;span&gt;</code> 元素构成。父元素定义如下： 
+			<ul>
+				<li><strong>general style:</strong> <code>.icon</code> <em>(mandatory)</em></li>
+				<li><strong>the size:</strong> <code>.icon-small</code>, <code>.icon-mid</code>, <code>.icon-large</code>, <code>.icon-extra-large</code>, <code>.icon-huge</code> <em>(mandatory)</em></li>
+				<li><strong>variant:</strong> <code>.icon-square</code>, <code>.icon-rounded</code> <em>(optional)</em></li>
+			</ul>
+			</p>
+			<p><pre>&lt;span class="icon icon-small icon-square"&gt;...&lt;/span&gt;</pre></p>
+			<p>子元素才是真正的icon实现 -- 可以使用的class在 <a href="#preview">预览</a> 部分。每个icon的组织形式必须如下：</p>
+			<p><pre>&lt;span class="icon icon-mid"&gt;&lt;span class="icon-mail"&gt;&lt;/span&gt;&lt;/span&gt;</pre></p>
+			<p>上面的代码效果如下：</p>
+			<div class="icons">
+				<span class="icon icon-mid"><span class="icon-mail"></span></span>
+			</div>
+			<p>样式是可选的：</p>
+			<p><pre>&lt;span class="icon icon-small icon-square"&gt;&lt;span class="icon-mail"&gt;&lt;/span&gt;&lt;/span&gt;</pre></p>
+			<p>上面的代码效果如下：</p>
+			<span class="icon icon-small icon-square"><span class="icon-mail"></span></span>
+		</div><!-- #usage.section.section-usage -->
+
+		<div id="examples" class="section section-examples">
+			<h2 class="section-title">案例</h2>
+			<div class="columns-wrap">
+				<div class="column-5 column-first">
+					<h5 class="section-subtitle">小号icon</h5>
+					<div class="icons">
+						<span class="icon icon-small"><span class="icon-calendar"></span></span>
+						<span class="icon icon-small"><span class="icon-home"></span></span>
+						<span class="icon icon-small"><span class="icon-download"></span></span>
+						<span class="icon icon-small"><span class="icon-upload"></span></span>
+					</div>
+					<div>
+						<pre>.icon-small {<br/>    font-size: 1em;<br/>}</pre>
+					</div>
+					<p class="full-list-link">
+						<span aria-hidden="true" class="icon-link"></span>
+						<a href="small-icons.html" title="View small icons full list">查看所有样式的小号icon</a>
+					</p>
+				</div><!-- .column-5.column-first -->
+
+				<div class="column-5 column-inside">
+					<h5 class="section-subtitle">中号icon</h5>
+					<div class="icons">
+						<span class="icon icon-mid"><span class="icon-calendar"></span></span>
+						<span class="icon icon-mid"><span class="icon-home"></span></span>
+						<span class="icon icon-mid"><span class="icon-download"></span></span>
+						<span class="icon icon-mid"><span class="icon-upload"></span></span>
+					</div>
+					<div>
+						<pre>.icon-mid {<br/>    font-size: 2em;<br/>}</pre>
+					</div>
+					<p class="full-list-link">
+						<span aria-hidden="true" class="icon-link"></span>
+						<a href="mid-icons.html" title="View mid icons full list">查看所有样式的中号icon</a>
+					</p>
+				</div><!-- .column-5.column-inside -->
+
+				<div class="column-5 column-inside">
+					<h5 class="section-subtitle">大号icon</h5>
+					<div class="icons">
+						<span class="icon icon-large"><span class="icon-calendar"></span></span>
+						<span class="icon icon-large"><span class="icon-home"></span></span>
+					</div>
+					<div>
+						<pre>.icon-large {<br/>    font-size: 4em;<br/>}</pre>
+					</div>
+					<p class="full-list-link">
+						<span aria-hidden="true" class="icon-link"></span>
+						<a href="large-icons.html" title="View large icons full list">查看所有样式的大号icon</a>
+					</p>
+				</div><!-- .column-5.column-inside -->
+
+				<div class="column-5 column-inside">
+					<h5 class="section-subtitle">超大号icon</h5>
+					<div class="icons">
+						<span class="icon icon-extra-large"><span class="icon-calendar"></span></span>
+					</div>
+					<div>
+						<pre>.icon-extra-large {<br/>    font-size: 8em;<br/>}</pre>
+					</div>
+					<p class="full-list-link">
+						<span aria-hidden="true" class="icon-link"></span>
+						<a href="extra-large-icons.html" title="View extra large icons full list">查看所有样式的超大号icon*</a>
+					</p>
+					<div class="footnote">* 此尺寸的icon对于小于480px宽度的屏幕就显得太大了。</div>
+				</div><!-- .column-5.column-inside -->
+
+				<div class="column-5 column-last">
+					<h5 class="section-subtitle">巨型icon</h5>
+					<div class="icons">
+						<span class="icon icon-huge"><span class="icon-calendar"></span></span>
+					</div>
+					<div>
+						<pre>.icon-huge {<br/>    font-size: 12em;<br/>}</pre>
+					</div>
+					<p class="full-list-link">
+						<span aria-hidden="true" class="icon-link"></span>
+						<a href="huge-icons.html" title="View huge icons full list">查看所有样式的巨型icon*</a>
+					</p>
+					<div class="footnote">* 此尺寸的icon对于小于550px宽度的屏幕就显得太大了。</div>
+				</div><!-- .column-5.column-last -->
+			</div><!-- .columns-wrap -->
+		</div><!-- #sizes.section.section-sizes -->
+
+		<div id="about" class="section section-about">
+			<h2 class="section-title">关于</h2>
+			<div class="columns-wrap">
+				<div class="column-4 column-first">
+					<h5 class="section-subtitle">什么事 Cikonss？</h5>
+					<p>Cikonss是利用纯CSS技术构建的响应式、跨浏览器的icon。所说的“跨浏览器”是指IE8+。这意味着必须使用CSS2，因此，可以绘制的形状或图形就收到了限制。</p>
+					<p>某些icon必须有 border-radius 属性，这主要是为了在支持此属性的浏览器上更好的绘制icon，而且不会影响到不支持此属性的浏览器。</p>
+				</div><!-- .column-4.column-first -->
+				<div class="column-4 column-inside">
+					<h5 class="section-subtitle">Why have I done this?</h5>
+					<p>Well, this was an experimental idea. I like to use css instead of images and graphics whenever it is possible.</p>
+					<p><em>It's a kind of fetish..</em></p>
+					<p>Then again, I like to have the smallest possible amount of media queries in css files. Playing with css responsive icons seemed like the next logical step.</p>
+				</div><!-- .column-4.column-inside -->
+				<div class="column-4 column-inside">
+					<h5 class="section-subtitle">Again, why have I done this?</h5>
+					<p>Everything I know about web, more or less, I have learned from wonderful open source community. This is a very humble attempt to give something back.</p>
+					<p>I hope you'll enjoy using Cikonss at least as much I enjoyed crafting them.</p>
+					<p>Cheers!</p>
+				</div><!-- .column-4.column-inside -->
+				<div class="column-4 column-last">
+					<h5 class="section-subtitle">Who am I?</h5>
+					<p>I'm a professional classical musician, a webdesign-css-html-jQuery-php-cms lover. In general, web fascinates me and completely fulfils my need for constant learning and experimenting with art and mathematics.</p>
+					<p>My name is Milana Cap but you can find me on web usually as "zzap". If you are coming from English speaking area then you have pronounced my last name very wrong. Hence "zzap".</p>
+				</div><!-- .column-4.column-last -->
+			</div><!-- .columns-wrap -->
+		</div><!-- #about.section.section-about -->
+	</div><!-- #content.wrapper.content-wrap -->
+
+	<footer id="footer" class="wrapper footer-wrap">
+		<div id="colophon" class="section section-colophon">
+			<p>&copy; 2013 Crafted with love for open source community</p>
+			<p>Cikonss由<a href="http://www.bootcss.com/">Bootstrap中文网</a>翻译整理</p>
+		</div>
+	</footer><!-- #footer.wrapper.footer-wrap -->
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/demo.js"></script>
+	<script src="/p/projects.js"></script>
+</body>
+</html>

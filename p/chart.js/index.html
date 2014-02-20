@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Chart.js | HTML5 图表绘制工具库</title>
+		
+		<meta name="description" content="Chart.js是一个基于HTML5 canvas技术的开源图表绘制工具库。Chart.js简化了在网站上绘制动态图表的工作。"/>
+
+		<!-- <script type="text/javascript" src="//use.typekit.net/puc1imu.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+		<script type="text/javascript" src="assets/Chart.js"></script>
+		<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="//cdnjs.bootcss.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+		<!--[if lte IE 8]>
+			<script type="text/javascript" src="assets/excanvas.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="styles.css"/>
+		<style>
+		body,p,h1,h2,h3,.btn
+		{
+			font-family: "Microsoft Yahei", sans-serif,arial;
+		}
+		</style>
+	</head>
+	<body>
+	<div class="redBorder"></div>
+	<div class="greenBorder"></div>
+	<div class="yellowBorder"></div>
+	<header>
+		<hgroup>
+			<h1>Chart.js</h1>
+			<h2>是一个简单、面向对象、为设计者和开发者准备的图表绘制工具库。</h2>
+		</hgroup>
+		
+		<canvas id="introChart" width="489" height="246"></canvas>
+		
+		<a class="btn red" href="docs">中文文档</a><a class="btn blue" href="https://github.com/nnnick/Chart.js">下载</a>
+	</header>
+	<section id="features">
+		<article>
+			<img src="assets/6charts.png">
+			<h3>6种图表类型</h3>
+			<p>Chart.js帮你用不同的方式让你的数据变得可视化。每种类型的图表都有动画效果，并且看上去非常棒，即便是在retina屏幕上。</p>
+		</article>
+		<article>
+			<img src="assets/html.png">
+			<h3>基于HTML5</h3>
+			<p>Chart.js基于HTML5 canvas技术，支持所有现代浏览器，并且针对IE7/8提供了降级替代方案。</p>
+		</article>
+		<article>
+			<img src="assets/simple.png">
+			<h3>简单、灵活</h3>
+			<p>Chart.js不依赖任何外部工具库，轻量级（压缩之后仅有4.5k），并且提供了加载外部参数的方法。</p>
+		</article>
+	</section>
+	<section id="examples">
+		<article id="lineChart" class="hidden">
+			<div class="half">
+				<h2>曲线图（Line charts）</h2>
+				<p>Line graphs are probably the most widely used graph for showing trends.</p>
+				<p>Chart.js has a ton of customisation features for line graphs, along with support for multiple datasets to be plotted on one chart.</p>
+			</div>
+			<div class="canvasWrapper">
+				<canvas id="lineChartCanvas" width="449" height="300"></canvas>		
+			</div>
+		</article>
+		
+		<article id="barChart" class="hidden">
+			<div class="canvasWrapper">
+				<canvas id="barChartCanvas" width="449" height="300"></canvas>		
+			</div>
+			<div class="half">
+				<h2>柱状图（Bar charts）</h2>
+				<p>Bar graphs are also great at showing trend data.</p>
+				<p>Chart.js supports bar charts with a load of custom styles and the ability to show multiple bars for each x value.</p>
+			</div>
+		</article>
+
+		<article id="radarChart" class="hidden">
+			<div class="half">
+				<h2>雷达图或蛛网图（Radar charts）</h2>
+				<p>Radar charts are good for comparing a selection of different pieces of data.</p>
+				<p>Chart.js supports multiple data sets plotted on the same radar chart. It also supports all of the customisation and animation options you'd expect.</p>
+			</div>
+			<div class="canvasWrapper">
+				<canvas id="radarChartCanvas" width="449" height="300"></canvas>		
+			</div>
+		</article>
+		
+		<article id="pieChart" class="hidden">
+			<div class="canvasWrapper">
+				<canvas id="pieChartCanvas" width="449" height="300"></canvas>		
+			</div>
+			<div class="half">
+				<h2>饼图（Pie charts）</h2>
+				<p>Pie charts are great at comparing proportions within a single data set.</p>
+				<p>Chart.js shows animated pie charts with customisable colours, strokes, animation easing and effects.</p>
+			</div>
+		</article>
+
+		<article id="polarAreaChart" class="hidden">
+			<div class="half">
+				<h2>极地区域图（Polar area charts）</h2>
+				<p>Polar area charts are similar to pie charts, but the variable isn't the circumference of the segment, but the radius of it. </p>
+				<p>Chart.js delivers animated polar area charts with custom coloured segments, along with customisable scales and animation.</p>
+			</div>
+			<div class="canvasWrapper">
+				<canvas id="polarAreaChartCanvas" width="449" height="300"></canvas>		
+			</div>
+		</article>
+
+		<article id="doughnutChart" class="hidden">
+			<div class="canvasWrapper">
+				<canvas id="doughnutChartCanvas" width="449" height="300"></canvas>		
+			</div>
+			<div class="half">
+				<h2>环形图（Doughnut charts）</h2>
+				<p>Similar to pie charts, doughnut charts are great for showing proportional data.</p>
+				<p>Chart.js offers the same customisation options as for pie charts, but with a custom sized inner cutout to turn your pies into doughnuts.</p>
+			</div>
+		</article>
+		<h3>Like what you see? <a href="https://github.com/nnnick/Chart.js">Download Chart.js on Github</a> or <a href="docs">read detailed documentation</a></h3>
+	</section>
+	<footer>
+		<p>A project by <a href="http://www.nickdownie.com">Nick Downie</a></p>
+		<p>Chart.js由<a href="http://www.bootcss.com/">Bootstrap中文网</a>翻译整理</p>
+		
+	</footer>
+	<script src="assets/effects.js"></script>
+	<script src="/p/projects.js"></script>
+	</body>
+</html>

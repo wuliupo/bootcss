@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>滑块 · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div class="page secondary">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>滑块<small class="fg-color-red">这个组件还在开发</small></h1>
+                <a class="back-button big page-back" href="/"></a>
+            </div>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+                <div class="grid">
+                    <div class="row">
+                        <div style="height: 200px;" class="span5">
+                            <h2>水平滑块</h2>
+                            <div class="slider"  data-param-init-value="0"></div>
+
+                            <h4>初始化开始值</h4>
+                            <div class="slider"  data-param-init-value="35"></div>
+
+                            <h4>分散模式 (精度 = 20)</h4>
+                            <div class="slider"  data-param-accuracy="20" data-param-init-value="0"></div>
+
+                            <h4>事件手柄</h4>
+
+                            <div id="slider1" class="slider" data-param-init-value="0"></div>
+                            <p class="tertiary-text">移动标记可以看到工作效果。</p>
+                            <div>
+                                当前值: <span id="slider1_value">0</span>
+                            </div>
+
+                            <script type="text/javascript">
+                                $(function(){
+                                    $("#slider1").on("change", function(e, val){
+                                        color = 'green';
+                                        if (val > 30) {
+                                            color = 'orange';
+                                        }
+                                        if (val > 70) {
+                                            color = 'red';
+                                        }
+                                        $("#slider1_value").html(val);
+                                        $(this).children(".complete").css("background-color",  color);
+                                    })
+                                })
+                            </script>
+
+                        </div>
+                        <div class="span5">
+                            <h2>垂直滑块</h2>
+                            <div class="slider vertical place-left" style="height: 200px;" data-param-accuracy="0" data-param-init-value="30"></div>
+                            <div class="slider vertical place-left" style="height: 200px;" data-param-accuracy="10" data-param-init-value="70"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span10">
+                    <h3>组件结构</h3>
+
+<pre class="prettyprint linenums">
+    &lt;div class="slider" data-role="slider"&gt;
+        &lt;div class="complete"&gt;&lt;/div&gt;
+        &lt;div class="marker"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+
+                    <h3>定义组件</h3>
+
+<pre class="prettyprint linenums">
+    &lt;div class="slider" data-role="slider"&gt;&lt;/div&gt;
+
+    &lt;div class="slider" data-role="slider" data-param-init-value="35"&gt;&lt;/div&gt;
+
+    &lt;div class="slider" data-role="slider" data-param-accuracy="20"&gt;&lt;/div&gt;
+
+    &lt;div class="slider vertical" data-role="slider"&gt;&lt;/div&gt;
+</pre>
+
+                   <p class="bg-color-red fg-color-white padding5">
+                        使用垂直滑动条你必须手动设置height属性。
+                    </p>
+                    <h3>参数</h3>
+                    <p>
+                        你可以设置滑块参数: <code>data-param-init-value</code> (default: 0) 和 <code>data-param-accuracy</code> (default: 1)。设置分散式值，精度不等于1。
+                    </p>
+                    <h3>事件</h3>
+                    <p>
+                        滑块组件支持下开事件: <code>onchange</code>, <code>onchanged</code>. <code>onchange</code> 事件触发滑块位置改变。<code>onchanged</code> 事件触发朦板块停止。
+                    </p>
+
+<pre class="prettyprint linenums">
+    $(function(){
+        $("#slider1").on("change", function(e, val){
+            // e is event
+            // val is current value
+            ...
+        })
+
+        $("#slider1").on("changed", function(e, val){
+            // e is event
+            // val is current value
+            ...
+        })
+
+        // for retrieve a current value you can call
+        $("#slider1").data('value');
+    })
+</pre>
+
+                    <h3>Javascript</h3>
+                    <p>
+                        使用滑块组件，需要在你的页面头部添加<code>slider.js</code> 。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>

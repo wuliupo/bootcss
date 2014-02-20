@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>幻灯片 · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div class="page secondary">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>幻灯片<small>案例</small></h1>
+                <a class="back-button big page-back" href="/"></a>
+            </div>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+                <div class="grid">
+                    <div class="row">
+                        <div class="span5">
+                            <div data-param-period="4000" data-param-duration="2000" data-param-direction="left" data-param-effect="slide" data-role="carousel" style="height: 300px;" class="carousel span5">
+                                <div class="slides">
+                                    <div id="slide1" class="slide image" style="left: -380px;">
+                                        <img src="images/1.jpg">
+                                    </div>
+                                    <div id="slide2" class="slide image" style="display: block; left: 0px;">
+                                        <img src="images/2.jpg">
+                                    </div>
+                                    <div id="slide3" class="slide image" style="display: none;">
+                                        <img src="images/3.jpg">
+                                    </div>
+                                </div>
+
+
+                                <span class="control left bg-color-blue">‹</span>
+                                <span class="control right bg-color-blue">›</span>
+
+                            <div class="markers"><ul><li class=""><a data-num="0" href="javascript:void(0)"></a></li><li class="active"><a data-num="1" href="javascript:void(0)"></a></li><li><a data-num="2" href="javascript:void(0)"></a></li></ul></div></div>
+                        </div>
+
+                        <div class="span5">
+                            <div data-param-markers="off" data-param-period="3000" data-param-direction="left" data-param-effect="fade" data-role="carousel" style="height: 300px;" class="carousel span5">
+                                <div class="slides">
+                                    <div id="slide4" class="slide image" style="display: none;">
+                                        <img src="images/1.jpg">
+                                        <div class="description">
+                                            Ut egestas tempor magna, sed rutrum felis fermentum quis. Aliquam congue ultricies elit, sit amet tempor tortor tempor nec.
+                                        </div>
+                                    </div>
+                                    <div id="slide5" class="slide image" style="display: none; left: 0px; top: 0px;">
+                                        <img src="images/2.jpg">
+                                        <div class="description">
+                                            Ut egestas tempor magna, sed rutrum felis fermentum quis. Aliquam congue ultricies elit, sit amet tempor tortor tempor nec.
+                                        </div>
+                                    </div>
+                                    <div id="slide6" class="slide image" style="display: block; left: 0px; top: 0px;">
+                                        <img src="images/3.jpg">
+                                        <div class="description">
+                                            This super beast eats fresh human flesh. She claws picking his nose, uttering at the same contented purring, and tooth picks out of leftover meat.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <span class="control left">‹</span>
+                                <span class="control right">›</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span5">
+                            <div data-param-markers="off" data-param-period="4000" data-param-duration="300" data-param-direction="left" data-param-effect="switch" data-role="carousel" style="height: 300px;" class="carousel span5">
+                                <div class="slides">
+                                    <div id="slide7" class="slide image" style="display: none;">
+                                        <img src="images/1.jpg">
+                                    </div>
+                                    <div id="slide8" class="slide image" style="display: block; left: 0px;">
+                                        <img src="images/2.jpg">
+                                    </div>
+                                    <div id="slide9" class="slide image" style="display: none;">
+                                        <img src="images/3.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="span5">
+                            <div data-param-markers="off" data-param-period="3000" data-param-direction="left" data-param-effect="slowdown" data-role="carousel" style="height: 300px;" class="carousel span5">
+                                <div class="slides">
+                                    <div id="slide10" class="slide image" style="left: -380px;">
+                                        <img src="images/1.jpg">
+                                    </div>
+                                    <div id="slide11" class="slide image" style="display: block; left: -380px;">
+                                        <img src="images/2.jpg">
+                                    </div>
+                                    <div id="slide12" class="slide image" style="display: block; left: 0px;">
+                                        <img src="images/3.jpg">
+                                    </div>
+                                </div>
+
+                                <span class="control left bg-color-darken">‹</span>
+                                <span class="control right bg-color-darken">›</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>自定义组件</h2>
+
+<pre class="prettyprint linenums span10"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"carousel"</span><span class="pln"> </span><span class="atn">data-role</span><span class="pun">=</span><span class="atv">"carousel"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"slides"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"slide image"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"slide1"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">                </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L4"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"description"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                    Description text here...</span></li><li class="L6"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L7"><span class="pln">            </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">&nbsp;</span></li><li class="L9"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"slide mixed"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"slide2"</span><span class="tag">&gt;</span></li><li class="L0"><span class="pln">                </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L1"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"description"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">                    Description text here...</span></li><li class="L3"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">            </span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">            ...</span></li><li class="L6"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="pln">        </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"control left"</span><span class="tag">&gt;</span><span class="pln">‹</span><span class="tag">&lt;/span&gt;</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"control right"</span><span class="tag">&gt;</span><span class="pln">›</span><span class="tag">&lt;/span&gt;</span></li><li class="L0"><span class="pln">&nbsp;</span></li><li class="L1"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                <p>你可以手动通过<code>width</code> 和 <code>height</code> 设置幻灯片大小。</p>
+
+                <p>
+                    使用幻灯片，你需要在你页面的<code>head</code>添加<code>carousel.js</code> ，同时在幻灯片对像上添加属性<code>data-role="carousel"</code>。
+                    设置特定的参数，例如：direction, duration, period, 等等。 给幻灯片设置特定的参数，需要使用属性<code>data-param-* </code>给幻灯片对象添加自定义样式。
+                </p>
+
+                <h3>参数:</h3>
+                <ul class="unstyled">
+                    <li><strong>auto</strong> - 自动播放(默认值: true)</li>
+                    <li><strong>period</strong> - 播放速度 (默认值: 6000)</li>
+                    <li><strong>duration</strong> - 持续时间 (默认值: 1000)</li>
+                    <li><strong>effect</strong> - 动画效果，有效的值: <em>slide, fade, slowdown, switch</em> (默认值: slide)</li>
+                    <li><strong>direction</strong> - 动画方向，有效值: <em>left, right</em> (默认值: left)</li>
+                    <li><strong>markers</strong> - on|off 幻灯片的朦板 (默认值: on)</li>
+                    <li><strong>arrows</strong> - on|off 滑动箭头 (默认值: on)</li>
+                    <li><strong>stop</strong> - on|off 鼠标悬停时动画 (默认值: on)</li>
+                </ul>
+
+<pre class="prettyprint linenums span10"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"carousel"</span><span class="pln"> </span><span class="atn">data-role</span><span class="pun">=</span><span class="atv">"carousel"</span><span class="pln"> </span><span class="atn">data-param-auto</span><span class="pun">=</span><span class="atv">"false"</span><span class="pln"> </span><span class="atn">data-param-effect</span><span class="pun">=</span><span class="atv">"fade"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+
+                <h2>Javascript</h2>
+                <p>需要在页面头部加载<code>carousel.js</code></p>
+
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>

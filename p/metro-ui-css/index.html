@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>首页 · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div id="page-index" class="page">
+    <div class="page-region">
+        <div class="page-region-content">
+            <div class="grid">
+		            <div class="row">
+		               <div class="span12 padding10 fg-color-darken text-center">
+		               这不是一个主题，也不是Twitter Bootstrap的复制品!!!
+		               </div>
+		            </div>
+                <div class="row">
+                    <div class="span8">
+                        <div class="hero-unit">
+                            <div data-param-duration="300" data-role="carousel" class="carousel" id="carousel1">
+                                <div class="slides">
+
+                                    <div id="slide1" class="slide">
+                                        <h2>现在就创建一个Windows 8风格的网站!</h2>
+
+                                        <p class="bg-color-blueDark padding20 fg-color-white">Metro UI CSS可以快速创建一个Windows 8风格的网站！</p>
+                                        <h3>开始吧: 引入 modern.css</h3>
+                                        <p class="tertiary-info-text">
+                                            &lt;link href="modern.css" rel="stylesheet"&gt;
+                                        </p>
+                                    </div>
+
+                                    <div id="slide2" class="slide">
+                                        <h2 class="fg-color-darken">Metro UI CSS</h2>
+                                        <p class="bg-color-pink padding20 fg-color-white">
+                                            微软建议开发者创建用户界面，需要<strong>包括:</strong>
+                                        </p>
+
+                                        <div class="span3 place-left">
+                                            <ul class="unstyled sprite-details">
+                                                <li><i class="icon-checkmark"></i> 一般风格</li>
+                                                <li><i class="icon-checkmark"></i> 网格和响应式</li>
+                                                <li><i class="icon-checkmark"></i> 布局</li>
+                                            </ul>
+                                        </div>
+                                        <div class="span3 place-left">
+                                            <ul class="unstyled sprite-details">
+                                                <li><i class="icon-checkmark"></i> 排版</li>
+                                                <li><i class="icon-checkmark"></i> 很多功能组件</li>
+                                                <li><i class="icon-checkmark"></i> 300+图标</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div id="slide3" class="slide">
+                                        <h2>Metro UI CSS 是一个 BizSpark Startup</h2>
+                                        <p class="bg-color-red fg-color-white padding20">
+                                            Microsoft&reg; BizSpark&reg; 是一个全球性的项目,帮助软件创业公司通过他们获得软件开发工具,帮助他们联系行业的关键技术员,并提供营销能见度。
+                                        </p>
+                                        <p>现在就<a href="http://bizspark.com">加入</a>BizSpark。</p>
+                                    </div>
+                                </div>
+
+                                <span class="control left"><i class="icon-arrow-left-3"></i></span>
+                                <span class="control right"><i class="icon-arrow-right-3"></i></span>
+
+                            <div class="markers"><ul><li class=""><a data-num="0" href="javascript:void(0)"></a></li><li class="active"><a data-num="1" href="javascript:void(0)"></a></li><li class=""><a data-num="2" href="javascript:void(0)"></a></li></ul></div></div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div id="sponsorBlock" class="span4 padding30 text-center place-left bg-color-blueLight">
+                            <br>
+                            <br>
+                            <h2 class="">本项目正在寻求赞助者</h2>
+                            <p class="">每天有2000+ <a href="http://hit.ua/site_view/19154" class="">用户</a></p>
+                            <br>
+                            <a href="http://metroui.org.ua/sponsoring.php"><h1><i class="icon-arrow-right-3 fg-color-red"></i></h1></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="row">
+                    <div class="span4 bg-color-blue">
+                        <img style="margin: 10px;" class="place-right" src="images/simple.png">
+                        <h2 class="fg-color-white">&nbsp;简约</h2>
+                    </div>
+
+                    <div class="span4 bg-color-green">
+                        <img style="margin: 10px;" class="place-right" src="images/grid.png">
+                        <h2 class="fg-color-white">&nbsp;全面</h2>
+                    </div>
+
+                    <div class="span4 bg-color-yellow">
+                        <img style="margin: 10px;" class="place-right" src="images/responsive.png">
+                        <h2 class="fg-color-white">&nbsp;响应式</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="row">
+                    <div class="span4">
+                        <img style="width:100%" src="images/author.jpg">
+                        <p style="padding: 10px; color: #fff;" class="tertiary-info-secondary-text bg-color-grayDark">
+                            Hi! 我是Sergey Pimenov ，我是Metro UI CSS 作者，来自于 <abbr title="The capital of Ukraine">Kiev</abbr>, <abbr title="The center of Europe">Ukraine</abbr>.
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <h2>欢迎</h2>
+                        <p>
+                            Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的解决方案。
+                        </p>
+                        <p>
+                            Metro UI CSS包含两种类型的许可证: <a href="https://github.com/olton/Metro-UI-CSS/blob/master/LICENSE">MIT</a> 和 <a href="https://github.com/olton/Metro-UI-CSS/blob/master/LICENSE-FOR-COMMERCIAL-USE">Commercial</a>
+                        </p>
+                        <h3>LESS</h3>
+                        <p class="tertiary-info-text">
+                            Metro UI CSS是用LESS在开发. 一个很优秀的男人，<a href="http://cloudhead.io/">Alexis Sellier</a>创建了这个动态CSS语言<a href="http://www.bootcss.com/lesscss.html">LESS</a>。 它使开发CSS更快、更简便、更有趣。
+                        </p>
+                        <h3>支持的浏览器:</h3>
+                        <div class="browsers-icons clearfix">
+                            <h2 title="Internet Explorer 9+" class="place-left"><i class="icon-IE"></i> </h2>
+                            <h2 title="Chrome" class="place-left"><i class="icon-chrome"></i> </h2>
+                            <h2 title="Firefox" class="place-left"><i class="icon-firefox"></i> </h2>
+                            <h2 title="Opera" class="place-left"><i class="icon-opera"></i> </h2>
+                            <h2 title="Safari" class="place-left"><i class="icon-safari"></i> </h2>
+                        </div>
+                        <br>
+                        <p class="tertiary-info-secondary-text">所有现代浏览器和IE9+</p>
+                    </div>
+                    <div class="span4">
+
+                        <h2><i class="icon-github-3"></i> GitHub项目信息:</h2>
+                        <table data-repo="olton/Metro-UI-CSS" class="github-info">
+                            <tbody>
+                            <tr>
+                                <td><i class="icon-star-4"></i> Starred:</td>
+                                <td class="right"><span class="github-watchers">1662</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-share-2"></i> Forks:</td>
+                                <td class="right bg"><span class="github-forks">467</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px 0 0; border: 0;" colspan="2">
+                                    <button onclick="document.location.href='https://github.com/olton/Metro-UI-CSS'" class="image-button bg-color-pink fg-color-white">Github查看<img src="images/github.png" class="bg-color-pinkDark"></button>
+                                    <button onclick="document.location.href='https://github.com/olton/Metro-UI-CSS/zipball/master'" class="image-button bg-color-darken fg-color-white">下载<img src="images/download-32.png" class="bg-color-green"></button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="">
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="AVMB2NYSENK3A">
+                                <!--<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">-->
+                                <!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
+                                <button type="submit" class="command-button bg-color-blueDark fg-color-white" style="width: 100%;">
+                                    <i class="icon-arrow-right-3 place-right" style="font-size: 24pt; margin-top: 5px;"></i>
+                                    赞助 <small class="fg-color-yellow">给 Metro UI CSS [PayPal]</small>
+                                </button>
+
+                            </form>
+                        </div>
+                        <div class="">
+                            <form method=POST action="https://liqpay.com/?do=clickNbuy">
+                                <input type="hidden" name="preorder" value="c27a4aa9211f4e6735b739850e99d568422af6e7">
+                                <button type="submit" class="command-button default" style="width: 100%;">
+                                    <i class="icon-arrow-right-3 place-right" style="font-size: 24pt; margin-top: 5px;"></i>
+                                    赞助 10 USD<small>给 Metro UI CSS [LiqPay]</small>
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>

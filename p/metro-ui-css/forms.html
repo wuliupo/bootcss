@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>表单 · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div class="page secondary">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>表单<small>案例</small></h1>
+                <a class="back-button big page-back" href="/"></a>
+            </div>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+                <div class="grid">
+                    <div class="row">
+                        <div class="span3">
+                            <h2>复选框</h2>
+                            <form>
+                                <label onclick="" class="input-control checkbox">
+                                    <input type="checkbox" value="1" checked="">
+                                    <span class="helper">选择状态效果</span>
+                                </label>
+
+                                <label onclick="" class="input-control checkbox">
+                                    <input type="checkbox">
+                                    <span class="helper">未选择状态</span>
+                                </label>
+
+                                <label class="input-control checkbox">
+                                    <input type="checkbox" disabled="">
+                                    <span class="helper">禁止未选择状态</span>
+                                </label>
+
+                                <label class="input-control checkbox">
+                                    <input type="checkbox" checked="" disabled="">
+                                    <span class="helper">禁止已选择状态</span>
+                                </label>
+
+                                <label onclick="" class="input-control checkbox intermediate">
+                                    <input type="checkbox">
+                                    <span class="helper">中间值状态</span>
+                                </label>
+
+                            </form>
+                        </div>
+
+                        <div class="span3">
+                            <h2>单选框</h2>
+                            <form>
+                                <label onclick="" class="input-control radio">
+                                    <input type="radio" checked="" name="r1">
+                                    <span class="helper">选中的单选按钮效果</span>
+                                </label>
+
+                                <label onclick="" class="input-control radio">
+                                    <input type="radio" name="r1">
+                                    <span class="helper">未选择中的单选按钮效果</span>
+                                </label>
+
+                                <label onclick="" class="input-control radio">
+                                    <input type="radio" disabled="" name="r1">
+                                    <span class="helper">禁止未选择的单选按钮</span>
+                                </label>
+
+                                <label onclick="" class="input-control radio">
+                                    <input type="radio" checked="" disabled="" name="r2">
+                                    <span class="helper">禁止已选择的单选按钮</span>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="span3">
+                            <h2>控制开关的切换</h2>
+                            <form>
+                                <label onclick="" class="input-control switch">
+                                    <input type="checkbox" checked="">
+                                    <span class="helper">开关处于打开状态</span>
+                                </label>
+                                <label onclick="" class="input-control switch">
+                                    <input type="checkbox">
+                                    <span class="helper">开关处于关闭状态</span>
+                                </label>
+                                <label onclick="" class="input-control switch">
+                                    <input type="checkbox" disabled="">
+                                    <span class="helper">开关禁止打开</span>
+                                </label>
+                                <label onclick="" class="input-control switch">
+                                    <input type="checkbox" checked="" disabled="">
+                                    <span class="helper">开关禁止关闭</span>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span10">
+
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;label</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control checkbox"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"helper"</span><span class="tag">&gt;</span><span class="pln">CheckBox Caption</span><span class="tag">&lt;/span&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/label&gt;</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;label</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control radio"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"radio"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">        </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"helper"</span><span class="tag">&gt;</span><span class="pln">CheckBox Caption</span><span class="tag">&lt;/span&gt;</span></li><li class="L8"><span class="pln">    </span><span class="tag">&lt;/label&gt;</span></li><li class="L9"><span class="pln">&nbsp;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;label</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control switch"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"helper"</span><span class="tag">&gt;</span><span class="pln">CheckBox Caption</span><span class="tag">&lt;/span&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/label&gt;</span></li></ol></pre>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span10">
+                            <h2>按钮</h2>
+                            <form>
+                                <input type="button" value="按钮">
+                                <input type="submit" value="提交">
+                                <input type="reset" value="重置">
+                                <input type="button" disabled="" value="按钮">
+                            </form>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Button"</span><span class="tag">/&gt;</span></li><li class="L1"><span class="pln">    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"submit"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Submit"</span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"reset"</span><span class="pln">  </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Reset"</span><span class="tag">/&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">disabled</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"Button"</span><span class="tag">/&gt;</span></li></ol></pre>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span5">
+                            <h2>文本框</h2>
+                            <form>
+                                <div class="input-control text">
+                                    <input type="text">
+                                    <button onclick="return false" class="helper"></button>
+                                </div>
+                                <div class="input-control text">
+                                    <input type="text" placeholder="输入文本">
+                                    <button class="helper"></button>
+                                </div>
+                                <div class="input-control text disabled">
+                                    <input type="text" value="禁止输入" disabled="">
+                                    <button class="helper"></button>
+                                </div>
+                                <div class="input-control text disabled">
+                                    <input type="text" value="这里没有帮助信息">
+                                </div>
+                            </form>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control text"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"helper"</span><span class="tag">&gt;&lt;/button&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+
+                        <div class="span5">
+                            <h2>密码框</h2>
+                            <form>
+                                <div class="input-control password">
+                                    <input type="password">
+                                    <button class="helper"></button>
+                                </div>
+                                <div class="input-control password">
+                                    <input type="password" placeholder="输入密码">
+                                    <button class="helper"></button>
+                                </div>
+                                <div class="input-control password">
+                                    <input type="password" disabled="">
+                                    <button class="helper"></button>
+                                </div>
+                                <div class="input-control password">
+                                    <input type="password">
+                                </div>
+                            </form>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control password"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"password"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"helper"</span><span class="tag">&gt;&lt;/button&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span10">
+                            <form>
+                            <div class="input-control text">
+                                <input type="text" placeholder="输入搜索的关键词...">
+                                <button class="btn-search"></button>
+                            </div>
+                            </form>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control text"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-search"</span><span class="tag">&gt;&lt;/button&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                            <div class="input-control text">
+                                <input type="phone" required="required" placeholder="输入手机号">
+                                <button class="helper"></button>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control text"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"phone"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"helper"</span><span class="tag">&gt;&lt;/button&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                            <div class="input-control text">
+                                <input type="email" required="required" placeholder="输入邮箱地址">
+                                <button class="helper"></button>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control text"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"email"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"helper"</span><span class="tag">&gt;&lt;/button&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                            <div class="input-control text">
+                                <input type="url" required="required" placeholder="输入网址">
+                                <button class="helper"></button>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control text"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"url"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"helper"</span><span class="tag">&gt;&lt;/button&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span10">
+                            <h2>下拉选择框</h2>
+                            <form>
+                                <div class="input-control select">
+                                    <select>
+                                        <option value="1"> 选项1</option>
+                                        <option value="2"> 选项2</option>
+                                        <option value="3"> 选项3</option>
+                                        <option value="4"> 选项4</option>
+                                        <option value="5"> 选项5</option>
+                                    </select>
+                                </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control select"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;select&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;option&gt;</span><span class="pln">...</span><span class="tag">&lt;/option&gt;</span></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;/select&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+
+                                <div class="input-control select">
+                                    <select multiple="6">
+                                        <option value="1"> 选项1</option>
+                                        <option value="2"> 选项2</option>
+                                        <option value="3"> 选项3</option>
+                                        <option value="4"> 选项4</option>
+                                        <option value="5"> 选项5</option>
+                                    </select>
+                                </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control select"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">multiple</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;option&gt;</span><span class="pln">...</span><span class="tag">&lt;/option&gt;</span></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;/select&gt;</span></li><li class="L4"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+
+                                <h2>文本域</h2>
+                                <div class="input-control textarea">
+                                    <textarea></textarea>
+                                </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control textarea"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;textarea&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;/textarea&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="span10">
+                            <h2>Fieldset</h2>
+                            <form>
+                                <fieldset>
+                                    <legend>Legend</legend>
+
+                                    <p class="tertiary-info-secondary-text">
+                                       W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。                </p>
+                                    <p></p>
+
+                                </fieldset>
+                            </form>
+                            <br>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;fieldset&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;legend&gt;</span><span class="pln">...</span><span class="tag">&lt;/legend&gt;</span></li><li class="L2"><span class="pln">        ...</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/fieldset&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span10">
+                            <h2>Input使用spanN类名</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input-control text spanN"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"helper"</span><span class="tag">&gt;&lt;/button&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                            <form>
+                                <div class="input-control text span1 as-block">
+                                    <input type="text" placeholder="s1">
+                                    <button class="helper"></button>
+                                </div>
+
+                                <div class="input-control text span2 as-block">
+                                    <input type="text" placeholder="span2">
+                                    <button class="helper"></button>
+                                </div>
+
+                                <div class="input-control text span3 as-block">
+                                    <input type="text" placeholder="span3">
+                                    <button class="helper"></button>
+                                </div>
+
+                                <div class="input-control text span4 as-block">
+                                    <input type="text" placeholder="span4">
+                                    <button class="helper"></button>
+                                </div>
+
+                                <div class="input-control text span5 as-block">
+                                    <input type="text" placeholder="span5">
+                                    <button class="helper"></button>
+                                </div>
+
+                                <div class="input-control text span6 as-block">
+                                    <input type="text" placeholder="span6">
+                                    <button class="helper"></button>
+                                </div>
+
+                                <div class="input-control text span7 as-block">
+                                    <input type="text" placeholder="span7">
+                                    <button class="helper"></button>
+                                </div>
+
+                                <div class="input-control text span8 as-block">
+                                    <input type="text" placeholder="span8">
+                                    <button class="helper"></button>
+                                </div>
+
+                                <div class="input-control text span9 as-block">
+                                    <input type="text" placeholder="span9">
+                                    <button class="helper"></button>
+                                </div>
+
+                                <div class="input-control text span10 as-block">
+                                    <input type="text" placeholder="span10">
+                                    <button class="helper"></button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="row">
+                                            </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>

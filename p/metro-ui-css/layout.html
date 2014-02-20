@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>布局与模板 · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div class="page secondary">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>布局<small>模板</small></h1>
+                <a class="back-button big page-back" href="/"></a>
+            </div>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+                <div class="grid">
+                    <div class="row">
+                        <div class="span10">
+                            <h2>默认页面布局</h2>
+                            <div style="background-color: #ccc; height: 300px;" class="span10">
+                                <div style="width: 100%;" class="page bg-color-blue">
+                                    <div style="border-bottom: 1px #fff dotted;" class="page-header">
+                                        <div class="page-header-content">
+                                            <h1 style="left: 20px; border-left: 1px #fff dotted;">标题</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="page-region">
+                                        <div style="padding-left: 20px;" class="page-region-content">
+                                            <div style="border-left: 1px #fff dotted; height: 180px;">
+                                                内容
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-header"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-header-content"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">            ...</span></li><li class="L4"><span class="pln">            </span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-region"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-region-content"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">                ...</span></li><li class="L0"><span class="pln">            </span><span class="tag">&lt;/div&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span10">
+                            <h2>二级页面布局</h2>
+                            <div style="background-color: #ccc; height: 300px;" class="span10">
+                                <div style="width: 100%;" class="page bg-color-blue">
+                                    <div style="border-bottom: 1px #fff dotted;" class="page-header">
+                                        <div class="page-header-content">
+                                            <h1 style="border-left: 1px #fff dotted;">标题</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="page-region">
+                                        <div class="page-region-content">
+                                            <div style="border-left: 1px #fff dotted; height: 180px;">
+                                                内容
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page secondary"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-header"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-header-content"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">            ...</span></li><li class="L4"><span class="pln">            </span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-region"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-region-content"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">                ...</span></li><li class="L0"><span class="pln">            </span><span class="tag">&lt;/div&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">
+                            <h2>Fill View</h2>
+                            <div style="background-color: #ccc; height: 300px;" class="span10">
+                                <div class="page fill bg-color-blue">
+                                    <p style="padding: 20px;">页面内容</p>
+                                </div>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page fill"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">
+                            <h2>Snapped View</h2>
+                            <div style="background-color: #ccc; height: 300px;" class="span10">
+                                <div class="page snapped bg-color-blue">
+                                    <p style="padding: 20px;">Page Content</p>
+                                </div>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page snapped"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">
+                            <h2>Fill &amp; Snapped View</h2>
+                            <div style="background-color: #ccc; height: 300px;" class="span10">
+                                <div class="page snapped bg-color-blue">
+                                    <p style="padding: 20px;">Page Content for snapped view page</p>
+                                </div>
+                                <div class="page fill bg-color-orange">
+                                    <p style="padding: 20px;">Page Content for fill view page</p>
+                                </div>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page snapped"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page fill"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">        ...</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">
+                            <h2>应用栏</h2>
+                            <div style="background-color: #ccc; height: 300px; position: relative;" class="span10">
+                                <div class="app-bar fg-color-white">
+                                    <p style="padding: 20px;">内容是程序应用栏</p>
+                                </div>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"app-bar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">
+                            <h2>Sharms</h2>
+                            <div style="background-color: #ccc; height: 300px; position: relative;" class="span10">
+                                <div class="charms bg-color-blue fg-color-white">
+                                    <p style="padding: 20px;">Content for charms</p>
+                                </div>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"charms"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">
+                            <h2>Flyouts</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">
+                            <h2>消息对话框</h2>
+                            <div style="background-color: #ccc; height: 300px; position: relative;" class="span10">
+                                <div class="message-dialog bg-color-green fg-color-white">
+                                    <p>消息对话框的内容</p>
+                                    <button class="place-right">单击我</button>
+                                </div>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"message-dialog"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">
+                            <h2>通知对话框</h2>
+                            <div style="background-color: #ccc; height: 300px; position: relative;" class="span10">
+                                <div class="error-bar fg-color-white">
+                                    <p>通知对话框的内容</p>
+                                    <button class="place-right">单击我</button>
+                                </div>
+                            </div>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"error(info, warning)-bar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="row">
+                                            </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>

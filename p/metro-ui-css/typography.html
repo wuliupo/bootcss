@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>排版 · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div class="page secondary">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>排版<small>案例</small></h1>
+                <a class="back-button big page-back" href="/"></a>
+            </div>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+                <h1>H1. 标题一</h1>
+                <h2>H2. 标题二</h2>
+                <h3>H3. 标题三</h3>
+                <h4>H4. 标题四</h4>
+                <h5>H5. 标题五</h5>
+                <h6>H6. 标题六</h6>
+
+                <p>所有HTML标题, <code>&lt;h1&gt;</code>到<code>&lt;h6&gt;</code>都是可用的。</p>
+
+                <a href="#" class="navigation-text">导航</a>
+                <p class="tertiary-text">使用<code>navigation-text</code>类名来创建导航<code>&lt;a class="navigation-text" /&gt;</code></p>
+
+                <a href="#">链接</a>
+
+                <h2>body-text和默认段落</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;p&gt;</span><span class="pln">...</span><span class="tag">&lt;/p&gt;</span></li><li class="L1"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"body-text"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                <p>
+                    W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。
+                </p>
+
+                <h2>body-secondary-text</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"body-secondary-text"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/p&gt;</span></li></ol></pre>
+                <p class="body-secondary-text">
+                    W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。
+                </p>
+
+                <h2>long-text</h2>
+                <small>使用这个类来显示大量的文本,比如书籍或杂志的内容。</small>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"long-text"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/p&gt;</span></li></ol></pre>
+                <p class="long-text">
+                   W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。
+
+                </p>
+
+                <h2>段落使用<code>.indent</code>类名</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"indent"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/p&gt;</span></li></ol></pre>
+                <p class="indent">
+                    W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。
+                </p>
+
+                <p class="indent">
+                    W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。
+                </p>
+
+                <h2>tertiary-text</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tertiary-text"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/p&gt;</span></li></ol></pre>
+                <p class="tertiary-text">
+                    W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。
+                </p>
+
+                <h2>tertiary-secondary-text</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tertiary-secondary-text"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/p&gt;</span></li></ol></pre>
+                <p class="tertiary-secondary-text">
+                    W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。                </p>
+
+                <div class="grid">
+                    <div class="row">
+                        <div class="span3">
+                            <h2>小文本</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;small&gt;</span><span class="pln">...</span><span class="tag">&lt;/small&gt;</span></li></ol></pre>
+                            <p>
+                                <small>我是小文本</small>.
+                            </p>
+                        </div>
+                        <div class="span4">
+                            <h2>加粗文本</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;strong&gt;</span><span class="pln">...</span><span class="tag">&lt;/strong&gt;</span></li></ol></pre>
+                            <p>
+                                <strong>我是加粗文本</strong>.
+                            </p>
+                        </div>
+                        <div class="span3">
+                            <h2>斜体文本</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;em&gt;</span><span class="pln">...</span><span class="tag">&lt;/em&gt;</span></li></ol></pre>
+                            <p>
+                                <em>我是斜体文本</em>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>缩略语</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;abbr</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"Title of abbreviation"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/abbr&gt;</span></li></ol></pre>
+                <p>缩写词的属性是<abbr title="attribute">attr</abbr></p>
+                <p><abbr class="initialism" title="HyperText Markup Language">html</abbr>是有史以来最好的事情吗</p>
+
+                <h2>地址</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;address&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/address&gt;</span></li></ol></pre>
+                <address>
+                    <strong>公司名称</strong><br>
+                    中国.上海<br>
+                    谈家渡路盛泉大厦<br>
+                    <abbr title="Phone">电话:</abbr> (086) 135 7878 5218
+                </address>
+
+                <address>
+                    <strong>大漠</strong><br>
+                    <a href="mailto:#">first.last@gmail.com</a>
+                </address>
+
+                <h2>引用块</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;blockquote&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/blockquote&gt;</span></li></ol></pre>
+                <blockquote>
+                    <p>W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。</p>
+                </blockquote>
+
+                <h2>引用块向左边</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;blockquote&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;small&gt;</span><span class="pln">...</span><span class="tag">&lt;/small&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/blockquote&gt;</span></li></ol></pre>
+                <blockquote>
+                    <p>W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。</p>
+                    <small>&mdash;&mdash;<cite title="Source Title">大漠</cite></small>
+                </blockquote>
+
+                <h2>引用块向右</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;blockquote</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"place-right"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        ...</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;small&gt;</span><span class="pln">...</span><span class="tag">&lt;/small&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/blockquote&gt;</span></li></ol></pre>
+                <blockquote class="place-right">
+                    <p>W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。</p>
+                    <small>&mdash;&mdash; <cite title="Source Title">大漠</cite></small>
+                </blockquote>
+
+                <h2>列表</h2>
+                <div class="grid">
+                    <div class="row">
+                        <div class="span3">
+                            <h3>无序列表</h3>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;ul&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;li&gt;</span><span class="pln">...</span><span class="tag">&lt;/li&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/ul&gt;</span></li></ol></pre>
+                            <ul>
+                                <li>前端爱好者的家园</li>
+                                <li>前端学习的站点</li>
+                                <li>W3CPLUS力求原创</li>
+                                <li>有关于css,css3,</li>
+                                <li>以一起学习，一起进步
+                                    <ul>
+                                        <li>前端爱好者的家园</li>
+                                        <li>W3CPLUS力求原创，</li>
+                                        <li>打造最优秀的web</li>
+                                        <li>打造最优秀的web</li>
+                                    </ul>
+                                </li>
+                                <li>W3CPLUS力求原创</li>
+                                <li>关于css,css3</li>
+                                <li>前端爱好者的家园</li>
+                            </ul>
+                        </div>
+
+                        <div class="span3">
+                            <h3>有序列表</h3>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;ol&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;li&gt;</span><span class="pln">...</span><span class="tag">&lt;/li&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/ol&gt;</span></li></ol></pre>
+                            <ol>
+                                <li>前端爱好者的家园</li>
+                                <li>W3CPLUS力求原创，</li>
+                                <li>打造最优秀的web</li>
+                                <li>打造最优秀的web</li>
+                                <li>前端爱好者的家园</li>
+                                <li>W3CPLUS力求原创，</li>
+                                <li>打造最优秀的web</li>
+                                <li>打造最优秀的web</li>
+                            </ol>
+                        </div>
+
+                        <div class="span4">
+                            <h3>无项目样式列表</h3>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"unstyled"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;li&gt;</span><span class="pln">...</span><span class="tag">&lt;/li&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/ul&gt;</span></li></ol></pre>
+                            <ul class="unstyled">
+                                <li>打造最优秀的web</li>
+                                <li>打造最优秀的web</li>
+                                <li>打造最优秀的web</li>
+                                <li>打造最优秀的web</li>
+                                <li>打造最优秀的web
+                                    <ul>
+                                        <li>前端爱好者的家园</li>
+                                        <li>前端爱好者的家园</li>
+                                        <li>前端爱好者的家园</li>
+                                        <li>前端爱好者的家园</li>
+                                    </ul>
+                                </li>
+                                <li>以一起学习，一起进步</li>
+                                <li>以一起学习，一起进步</li>
+                                <li>以一起学习，一起进步</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>

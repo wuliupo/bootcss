@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Bootstrap -- 基于Bootstrap样式的 jQuery UI 控件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="基于Bootstrap样式的 jQuery UI 控件">
+     <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="Bootstrap,jQuery,jQuery UI,CSS,CSS框架,CSS framework,javascript,bootcss,bootstrap开发,bootstrap代码,bootstrap入门">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="bootcss.com">
+
+    <!-- Le styles -->
+    <link href="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link type="text/css" href="//cdnjs.bootcss.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css" rel="stylesheet" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="//cdnjs.bootcss.com/ajax/libs/font-awesome/3.0.2/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery.ui.1.10.0.ie.css"/>
+    <![endif]-->
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet">
+    <!--begin wijmo menu-->
+    <link href="third-party/wijmo/jquery.wijmo-open.1.5.0.css" rel="stylesheet" type="text/css" />
+    <!--End wijmo menu-->
+    <!--begin file input-->
+    <link href="third-party/jQuery-UI-FileInput/css/enhanced.css" rel="Stylesheet">
+    <!--End file input-->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.bootcss.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+</head>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
+
+<!-- Navbar
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="./index.html">手册</a>
+                    </li>
+                    <li class="active">
+                        <a href="./extra.html">扩展</a>
+                    </li>
+                   
+                </ul>
+                <div id="twitter-share" class="pull-right">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+    <div class="container">
+        <h1>jQuery UI Bootstrap</h1>
+        <p class="lead">基于Bootstrap样式的 jQuery UI 控件 (v0.5).</p>
+    </div>
+</header>
+
+
+<div class="container">
+    <!-- Docs nav ================================================== -->
+    <div class="row">
+        <div class="span3 bs-docs-sidebar">
+            <ul class="nav nav-list bs-docs-sidenav">
+                <li><a href="#wijmo"><i class="icon-chevron-right"></i> Wijmo控件</a></li>
+                <li><a href="#file-input"><i class="icon-chevron-right"></i> 文件上传选择框</a></li>
+                <li><a href="#date-range"><i class="icon-chevron-right"></i> 日期区间</a></li>
+            </ul>
+        </div>
+        <div class="span9">
+            <!-- Wijmo ================================================== -->
+            <section id="wijmo">
+                <div class="page-header">
+                    <h1>Wijmo</h1>
+                </div>
+                <p>
+                    This is an example of how to retheme one of the Wijmo jQuery UI components to match the Twitter Bootstrap theme. Whilst a menu component will be arriving to jQueryUI soon, you can find the menu in <a href="http://wijmo.com/widgets/wijmo-open/">Wijmo Open</a>.
+                </p>
+                <div id="wijmo-container" class="container-fluid">
+                    <ul id="menu1">
+                        <li>
+                            <h3>
+                                <a href="">Project Name</a></h3>
+                        </li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Dropdown</a>
+                            <ul>
+                                <li><a href="#">Secondary link</a> </li>
+                                <li><a href="#">Something else here</a> </li>
+                                <li></li>
+                                <li><a href="#">Another link</a> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="text" placeholder="Search">
+                        </li>
+                    </ul>
+                    <!-- End demo markup -->
+                </div>
+                <div class="clearfix"></div>
+<pre class="prettyprint linenums">
+$("#menu1").wijmenu({
+    trigger: ".wijmo-wijmenu-item",
+    triggerEvent: "click"
+});
+</pre>
+            </section>
+            <!-- File input -->
+            <section id="file-input">
+                <div class="page-header">
+                    <h1>文件上传选择框</h1>
+                </div>
+                <div class="container-fluid">
+                    <form>
+                        <input type="file" class="span3" name="file" id="file">
+                    </form>
+                </div>
+<pre class="prettyprint linenums">
+$('#file').customFileInput({
+    button_position : 'right'
+});
+</pre>
+            </section>
+            <!-- end file input -->
+            <!-- File input -->
+            <section id="date-range">
+                <div class="page-header">
+                    <h1>Select a Date Range with datepicker</h1>
+                </div>
+                <p>
+                    <input type="text" value="01/01/2013" id="rangeBa" />
+                    <input type="text" value="02/06/2013" id="rangeBb" />
+                </p>
+<pre class="prettyprint linenums">
+// Select a Date Range with datepicker
+$( "#rangeBa" ).datepicker({
+    defaultDate: "+1w",
+    changeMonth: true,
+    numberOfMonths: 3,
+    onClose: function( selectedDate ) {
+        $( "#rangeBb" ).datepicker( "option", "minDate", selectedDate );
+    }
+});
+$( "#rangeBb" ).datepicker({
+    defaultDate: "+1w",
+    changeMonth: true,
+    numberOfMonths: 3,
+    onClose: function( selectedDate ) {
+        $( "#rangeBa" ).datepicker( "option", "maxDate", selectedDate );
+    }
+});
+</pre>
+            </section>
+            <!-- end file input -->
+        </div>
+    </div>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <p>
+            jQuery UI Bootstrap &copy; Addy Osmani 2012 - 2013.
+        </p>
+        <p>
+            Twitter Bootstrap &copy; Twitter 2012 - 2013
+        </p>
+        <ul class="footer-links">
+            <li><a href="http://addyosmani.com/blog/">Blog</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
+        </ul>
+    </div>
+</footer>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="//cdnjs.bootcss.com/ajax/libs/jquery-migrate/1.1.1/jquery-migrate.min.js"></script>
+<script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+<script src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js" type="text/javascript"></script>
+<script src="assets/js/docs.js" type="text/javascript"></script>
+<!-- FileInput -->
+<script src="third-party/jQuery-UI-FileInput/js/enhance.min.js" type="text/javascript"></script>
+<script src="third-party/jQuery-UI-FileInput/js/fileinput.jquery.js" type="text/javascript"></script>
+<!-- End FileInput -->
+<!--wijmo-->
+<script src="third-party/wijmo/jquery.mousewheel.min.js" type="text/javascript"></script>
+<script src="third-party/wijmo/jquery.wijmo-open.1.5.0.min.js" type="text/javascript"></script>
+<!--End wijmo-->
+<script src="assets/js/demo.js" type="text/javascript"></script>
+<script src="/p/projects.js"></script>
+<!-- Analytics
+    ================================================== -->
+   
+</body>
+</html>

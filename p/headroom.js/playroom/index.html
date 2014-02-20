@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>Headroom.js playground</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../assets/styles/main.css?v=1">
+  <meta name="description" content="Headroom.js 是一个轻量级、纯 JS 组件，用来隐藏或展现页面上的元素，为你的页面留下更多展示内容的空间。">
+
+</head>
+<body class="language-javascript">
+
+<header id="header" class="header header--fixed hide-from-print" role="banner">
+  <div class="container">
+    <nav id="nav" class="nav-wrapper" role="navigation">
+      <ul class="nav nav--main">
+        <li class="nav__item ">
+          <a class="header__link subdued" href="https://www.github.com/WickyNilliams/headroom.js">
+            <span aria-hidden="true" class="icon icon--github"></span>
+            <span class="complimentary push--left">GitHub</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="header__link subdued" href="http://www.twitter.com/WickyNilliams">
+            <span aria-hidden="true" class="icon icon--twitter"></span>
+            <span class="complimentary push--left">@WickyNilliams</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a href="../" class="brand header__link">
+      <b class="brand__forename">Headroom</b><b class="brand__surname">.js</b>
+    </a>
+  </div>
+</header>
+
+<article>
+
+<header class="feature">
+  <div class="container container--wide feature-title">
+    <h1 class="feature-title__title headroom-title">Playroom</h1>
+    <p class="feature-title__subtitle">在此页面可以动态调整 Headroom.js 的参数，并能立即看到效果</p>
+  </div>
+</header>
+
+<div class="container block main" role="main">
+  <p>
+    调整下面的参数就能看到不同的效果。本案例所用的样式是修改自 <a href="http://daneden.me/animate/">animate.css</a>。
+  </p>
+  <p>
+     你对参数的修改会自动应用到此页面的页头。并且下面的示例代码也会随着改变。
+  </p>
+
+  <form class="form">
+
+    <fieldset class="question-set">
+      <legend class="question-set__title">
+        <h3>参数</h3>
+      </legend>
+      <div class="grid">
+        <div class="grid__item one-half">
+          <label class="question-set__label question-set__label--block" for="offset">偏移</label>
+          <input class="question-set__input" type="number" name="offset" id="offset" value="205">
+        </div>
+        <div class="grid__item one-half">
+          <label class="question-set__label question-set__label--block" for="tolerance">容差</label>
+          <input class="question-set__input" type="number" name="tolerance" id="tolerance" value="5">
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="question-set push--remove-bottom">
+      <legend class="question-set__title">
+        <h3>样式</h3>
+      </legend>
+      <div class="grid">
+        <div class="grid__item one-half lap--one-quarter">
+          <label class="question-set__label" for="slide">
+            <input type="radio" id="slide" value="slide" name="style" checked="checked"> Slide</label>
+        </div>
+        <div class="grid__item one-half lap--one-quarter">
+          <label class="question-set__label" for="swing">
+            <input type="radio" id="swing" value="swing" name="style"> Swing</label>
+        </div>
+        <div class="grid__item one-half lap--one-quarter">
+          <label class="question-set__label" for="flip">
+            <input type="radio" id="flip" value="flip" name="style"> Flip</label>
+        </div>
+        <div class="grid__item one-half lap--one-quarter">
+          <label class="question-set__label" for="bounce">
+            <input type="radio" id="bounce" value="bounce" name="style"> Bounce</label>
+        </div>
+      </div>
+    </fieldset>
+
+  </form>
+
+  <h3>纯 JS 方式</h3>
+  <p>
+      使用纯 JS 代码，将options对象对位第二个参数传递给构造函数。注意，以这种方式使用Headroom.js 时，options对象不会和默认参数进行合并（也就是说，你必须定义所有参数 ）。
+  </p>
+  <pre class="language-javascript widget-code"><code></code></pre>
+
+  <h3>插件方式</h3>
+  <p>
+      以插件方式使用的话，options对象自动与默认参数对象合并（即使用 $.extend(true, {}, defaultOptions, yourOptions) 方法进行合并）。
+  </p>
+  <pre class="language-javascript plugin-code"><code></code></pre>
+  
+  <h3>Data API 方式</h3>
+  <p>
+      如果使用 data-* API 方式，任何参数都需要以 data 属性的形式出现。所有以  data-* API 传递的参数都将与默认参数合并。通过传递 JSON 对象可以改变 headroom.js 默认设置的 CSS class。
+  </p>
+  <pre class="language-javascript data-api-code"><code></code></pre>
+
+  
+
+</div>
+</article>
+
+<script src="../assets/scripts/main.js?v=1"></script>
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="/p/projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>网格系统 · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div class="page secondary">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>网格<small>系统</small></h1>
+                <a class="back-button big page-back" href="/"></a>
+            </div>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+                <div class="span10">
+                    <h2>默认网格系统</h2>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"grid"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"spanN"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">            ...</span></li><li class="L4"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"spanN"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                    <p>
+                       网格没有<code>max-width</code>值和父容器设置100%. 单元格都具有从<code>span1</code>到<code>span12</code>这样的类名spanN。类spanN设置了<code>margin-left</code>等于20px和<code>margin-bottom</code>等于5px.
+                    </p>
+                    <h2>单元格尺寸</h2>
+                    <table class="stripped bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">N</th>
+                                <th>单元格类名</th>
+                                <th class="right">单元格宽度</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="span1 center">1</td><td>span1</td><td class="right span2">60px</td></tr>
+                            <tr><td class="span1 center">2</td><td>span2</td><td class="right">140px</td></tr>
+                            <tr><td class="span1 center">3</td><td>span3</td><td class="right">220px</td></tr>
+                            <tr><td class="span1 center">4</td><td>span4</td><td class="right">300px</td></tr>
+                            <tr><td class="span1 center">5</td><td>span5</td><td class="right">380px</td></tr>
+                            <tr><td class="span1 center">6</td><td>span6</td><td class="right">460px</td></tr>
+                            <tr><td class="span1 center">7</td><td>span7</td><td class="right">540px</td></tr>
+                            <tr><td class="span1 center">8</td><td>span8</td><td class="right">620px</td></tr>
+                            <tr><td class="span1 center">9</td><td>span9</td><td class="right">700px</td></tr>
+                            <tr><td class="span1 center">10</td><td>span10</td><td class="right">780px</td></tr>
+                            <tr><td class="span1 center">11</td><td>span11</td><td class="right">860px</td></tr>
+                            <tr><td class="span1 center">12</td><td>span12</td><td class="right">940px</td></tr>
+                        </tbody>
+                    </table>
+                    <p>类spanN可以用在任何标签上，用来设置宽度。</p>
+                </div>
+                <h3>例如</h3>
+                <div class="grid element-border">
+                    <div class="row">
+                        <div class="span1">span1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span2">span2</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span3">span3</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span4">span4</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span5">span5</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span6">span6</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span7">span7</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span8">span8</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span9">span9</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span10">span10</div>
+                    </div>
+                </div>
+
+                <h2>网格的嵌套</h2>
+                <p>你可以在网格中嵌套网格</p>
+<pre class="prettyprint linenums span10"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"grid"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"spanN"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"spanN"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                        ...</span></li><li class="L6"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L7"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">            </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                <h3>例如</h3>
+                <div class="grid span10">
+                    <div class="row">
+                        <div class="span10 bg-color-pink">主网格</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span5">
+                            <div class="row bg-color-green">
+                                <div class="span2">子网格1</div>
+                                <div class="span2">子网格2</div>
+                                <div class="span1">子网格3</div>
+                            </div>
+                        </div>
+                        <div class="span5">
+                            <div class="row bg-color-yellow">
+                                <div class="span3">子网格1</div>
+                                <div class="span2">子网格2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span10 bg-color-pink">主网格</div>
+                    </div>
+                </div>
+
+                <h2>偏移</h2>
+                <div class="grid element-border">
+                    <div class="row">
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                        <div class="span1">1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span9 offset1">offset1</div>
+                    </div>
+                    <div class="row">
+                        <div class="span8 offset2">offset2</div>
+                    </div>
+                    <div class="row">
+                        <div class="span7 offset3">offset3</div>
+                    </div>
+                    <div class="row">
+                        <div class="span6 offset4">offset4</div>
+                    </div>
+                    <div class="row">
+                        <div class="span5 offset5">offset5</div>
+                    </div>
+                    <div class="row">
+                        <div class="span4 offset6">offset6</div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 offset7">offset7</div>
+                    </div>
+                    <div class="row">
+                        <div class="span2 offset8">offset8</div>
+                    </div>
+                    <div class="row">
+                        <div class="span1 offset9">offs9</div>
+                    </div>
+                </div>
+                <h2>偏移尺寸</h2>
+                <div class="span10">
+                    <table class="stripped bordered">
+                        <thead>
+                        <tr>
+                            <th class="text-center">N</th>
+                            <th>单元格类名</th>
+                            <th class="right">单元格宽度</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td class="span1 center">1</td><td>offset1</td><td class="right span2">80px</td></tr>
+                        <tr><td class="span1 center">2</td><td>offset2</td><td class="right">160px</td></tr>
+                        <tr><td class="span1 center">3</td><td>offset3</td><td class="right">240px</td></tr>
+                        <tr><td class="span1 center">4</td><td>offset4</td><td class="right">320px</td></tr>
+                        <tr><td class="span1 center">5</td><td>offset5</td><td class="right">400px</td></tr>
+                        <tr><td class="span1 center">6</td><td>offset6</td><td class="right">480px</td></tr>
+                        <tr><td class="span1 center">7</td><td>offset7</td><td class="right">560px</td></tr>
+                        <tr><td class="span1 center">8</td><td>offset8</td><td class="right">640px</td></tr>
+                        <tr><td class="span1 center">9</td><td>offset9</td><td class="right">720px</td></tr>
+                        <tr><td class="span1 center">10</td><td>offset10</td><td class="right">800px</td></tr>
+                        <tr><td class="span1 center">11</td><td>offset11</td><td class="right">880px</td></tr>
+                        <tr><td class="span1 center">12</td><td>offset12</td><td class="right">960px</td></tr>
+                        </tbody>
+                    </table>
+                    <p>类名offsetN可以用来给任何标签设置<code>margin-left</code>的值。</p>
+                </div>
+
+                <div class="grid">
+                    <div class="row">
+                                            </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>

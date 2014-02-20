@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="description" content="Bsie（鄙视IE） -- Bootstrap IE6 兼容库。bsie弥补了Bootstrap对IE6的不兼容">
+    <meta name="keywords" content="bsie,Bootstrap IE6, Bootstrap,CSS,CSS框架,CSS framework,javascript,bootcss,bootstrap开发,bootstrap代码,bootstrap入门">
+    <title>Bsie（鄙视IE） -- Bootstrap IE6 兼容库</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Bsie（鄙视IE）</h1>
+          <h2>Bootstrap IE6 兼容库</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/ddouble/bsie/zipball/master" id="download-zip" class="button"><span>下载 .zip 压缩包</span></a>
+          <a href="https://github.com/ddouble/bsie/tarball/master" id="download-tar-gz" class="button"><span>下载 .tar.gz 压缩包</span></a>
+          <a href="https://github.com/ddouble/bsie" id="view-on-github" class="button"><span>去GitHub看看</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h2>欢迎，这是bsie项目主页。</h2>
+
+<h3>简介</h3>
+
+<p>bsie弥补了Bootstrap对IE6的不兼容。Bootstrap是 <a href="http://twitter.github.com/bootstrap">twitter.com</a> 推出的非常棒的web UI工具库。</p>
+
+<p>目前，bsie能在IE6上支持大部分bootstrap的特性，可惜，还有一些实在无法支持...</p>
+
+<p>下面的这个表格就是当前已经被支持的bootstrap的组件和特性：</p>
+
+<pre><code>组件       特性
+-----------------------------------------------------------
+grid            fixed, fluid
+navbar          top, fixed
+nav             list, tabs, pills
+dropdown        dropdown (two level)
+buttons         button, group color, size, dropdown-button, 
+                (disable state is not dynamic)
+form            default, horizontal, inline, all controls, 
+                validation state
+tables          hover
+pagination      all
+labels          all
+badges          all
+code            all
+modal           most
+tooltip         all
+popover         all
+alert           all
+typeahead       all
+progressbar     most
+media           all
+wells           all
+hero unit       all
+icons           all
+</code></pre>
+
+<h3>文件用途介绍</h3>
+
+<p><code>bootstrap/css/bootstrap.css :</code></p>
+
+<p>这是bootstrap原始的css文件。</p>
+
+<p><code>bootstrap/css/bootstrap.min.css :</code></p>
+
+<p>这是bootstrap原始的压缩后的css文件。</p>
+
+<p><code>bootstrap/css/bootstrap-ie6.css :</code></p>
+
+<p>这是bsie的主要的css文件。</p>
+
+<p><code>bootstrap/css/bootstrap-ie6.min.css :</code></p>
+
+<p>这是bsie压缩后的css文件。</p>
+
+<p><code>bootstrap/css/ie.css :</code></p>
+
+<p>这是bsie额外添加的css补丁，这个文件中的大部分内容无法写入到 .less 文件中，并且必须紧跟在 bootstrap-ie6.css 之后在<code>&lt;head&gt;</code> 中引入。</p>
+
+<p><code>js/bootstrap-ie.js :</code></p>
+
+<p>这个javascript补丁文件用于解决一些纯CSS无法完成工作。</p>
+
+<p><code>bootstrap/img/glyphicons-halflings.png-8.png :</code></p>
+
+<p>这个图片文件是针对IE6的透明格式图标，是png 8bit格式的，显示效果虽然并不是太好，但是也还可以接受。</p>
+
+<p><code>bootstrap/less-ie6 :</code></p>
+
+<p>这个目录下是所有打过补丁的 .less 文件，你可以用lessc命令重新编译出 bootstrap-ie6.css文件</p>
+
+<h3>案例</h3>
+
+<p><strong>在bsie目录下有以下几个案例：</strong></p>
+
+<p><code>test-XXX.html</code>, 例如 test-buttons.html  test-form.html</p>
+
+<p><code>p-1.html</code>...<code>p-N.html</code>, 这几个文件都是直接从bootstrap案例中拷贝过来的</p>
+
+<h3>使用手册</h3>
+
+<p><strong>第1步， 在 <code>&lt;head&gt;</code> 中添加以下css文件：</strong></p>
+
+<pre><code>  &lt;!-- Bootstrap css file v2.2.1 --&gt;
+  &lt;link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"&gt;
+
+  &lt;!--[if lte IE 6]&gt;
+  &lt;!-- bsie css 补丁文件 --&gt;
+  &lt;link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-ie6.css"&gt;
+
+  &lt;!-- bsie 额外的 css 补丁文件 --&gt;
+  &lt;link rel="stylesheet" type="text/css" href="bootstrap/css/ie.css"&gt;
+  &lt;![endif]--&gt;
+</code></pre>
+
+<p><strong>第2步，在html文档结尾处加入以下的javascript文件：</strong></p>
+
+<pre><code>  &lt;!-- jQuery 1.7.2 or higher --&gt;
+  &lt;script type="text/javascript" src="js/jquery-1.7.2.min.js"&gt;&lt;/script&gt;
+
+  &lt;!-- Optional, bootstrap javascript library --&gt;
+  &lt;script type="text/javascript" src="bootstrap/js/bootstrap.js"&gt;&lt;/script&gt;
+
+  &lt;!--[if lte IE 6]&gt;
+  &lt;!-- bsie js 补丁只在IE6中才执行 --&gt;
+  &lt;script type="text/javascript" src="js/bootstrap-ie.js"&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;
+</code></pre>
+
+<p><strong>第3步，根据你的情况，这一步是可选的：</strong></p>
+
+<p>IE6   <strong>注意：</strong> : 对每一个新加载的html片段都要调用 $.bootstrapIE6(el) 函数，其实主要就是指的通过ajax获取到的html内容</p>
+
+<pre><code>/**
+ * 让el容器中的的所有元素都能兼容IE6
+ */
+$.bootstrapIE6(el)
+</code></pre>
+
+<p>目前在IE6下还不能支持tab控件的嵌套，主要是因为IE6不支持css的子选择器 </p>
+
+<h3>IE6-7 hack</h3>
+
+<p><strong>IE6 hack</strong></p>
+
+<pre><code>  _zoom:1;
+</code></pre>
+
+<p><strong>IE6-7 hack</strong></p>
+
+<pre><code>  *zoom:1;
+</code></pre>
+
+<h3>IE6 bug fix tip</h3>
+
+<p><strong>hasLayout (clear float):</strong></p>
+
+<pre><code>  .container 
+  { 
+    zoom:1; 
+  }
+</code></pre>
+
+<p><strong>其它能够触发haslayout的css属性：</strong></p>
+
+<pre><code>  position:   absolute
+  float:      left | right
+  display:    inline-block
+  width:      except 'auto'
+  height:     except 'auto'
+  zoom:       except 'normal'
+  overflow:   hidden | scroll | auto
+  overflow-x/-y: hidden | scroll | auto
+  position:   fixed
+  min-width:  any value
+  max-width:  except 'none'
+  min-height: any value
+  max-height:  except 'none'
+  writing-mode: tb-rl   /* only for MS */
+</code></pre>
+
+<p><strong>下面列出的css属性能够清除hasLayout：</strong></p>
+
+<pre><code>  width:        auto;
+  height:       auto;
+  max-width:    none;   /* IE7 */
+  max-height:   none;   /* IE7 */
+  position:     static;
+  float:        none;
+  overflow:     visible;
+  zoom:         normal;
+  writing-mode: lr-t;
+</code></pre>
+
+<p><strong>In one selector, following css will not set hasLayout=false:</strong></p>
+
+<pre><code>  .element {
+    display:inline-block;
+    display:inline;
+  }
+</code></pre>
+
+<p><strong>inline-block:</strong></p>
+
+<pre><code>  `.container 
+  { 
+    zoom:1; 
+    display:inline;
+  }
+</code></pre>
+
+<p><strong>透明色：</strong></p>
+
+<pre><code>  .element
+  {
+    border-color:pink/* rarely used color */;
+    filter:chroma(color:pink);
+  }
+  * 注意：在relative定位的容器中包含的absolute元素将会由于filter的缘故而消失
+</code></pre>
+
+<p><strong>body元素的背景色：</strong></p>
+
+<pre><code>  body { /* Faild: Sometime, it will not render whole page by gray color  */
+    background-color: gray;
+  }
+  * html { /* Success! */
+    background-color: gray;
+  }
+</code></pre>
+
+<p>IE6-7  ul.dropdown-menu 必须增加以下样式： <em>*width:explicit-width</em>;</p>
+
+<pre><code>  /* for example */
+  *width:180px;
+</code></pre>
+
+<p>If you have some patch for these library, Please send to:
+<a href="mailto:ddouble.cn@gmail.com">ddouble.cn@gmail.com</a></p>
+
+<p>Thanks.</p>
+        </section>
+
+        <footer>
+          Bsie is maintained by <a href="https://github.com/ddouble">ddouble</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+          <p>Bsie由<a href="http://www.bootcss.com/">Bootstrap中文网</a>翻译整理</p>
+        </footer>
+
+      </div>
+    </div>
+
+    <script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/p/projects.js"></script>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>侧边栏 · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div class="page secondary with-sidebar">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>侧边栏<small>案例</small></h1>
+                <a class="back-button big page-back" href="/"></a>
+            </div>
+        </div>
+
+        <div class="page-sidebar">
+            <ul>
+                <li>
+                    <a>项目</a>
+                    <ul class="sub-menu">
+                        <li><a href="">当前</a></li>
+                        <li><a href="">关闭</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>笔记</a>
+                    <ul class="sub-menu">
+                        <li><a href="">重要</a></li>
+                        <li><a href="">今天</a></li>
+                        <li><a href="">一周</a></li>
+                        <li><a href="">一个月</a></li>
+                    </ul>
+                </li>
+
+                <li class="sticker sticker-color-orange"><a href="#"><i class="icon-cart"></i> 购物</a></li>
+                <li class="sticker sticker-color-orangeDark"><a href="#"><i class="icon-clipboard"></i> 食谱</a></li>
+                <li class="sticker sticker-color-green"><a href="#"><i class="icon-history"></i> 爱好</a></li>
+                <li data-role="dropdown" class="sticker sticker-color-pink dropdown active">
+                    <a><i class="icon-list"></i> 要做的</a>
+                    <ul class="sub-menu light sidebar-dropdown-menu open">
+                        <li><a href="">今天</a></li>
+                        <li><a href="">工作清单</a></li>
+                        <li><a href="">下班后要做的</a></li>
+                        <li><a href="">观看电影</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+                <div class="span9">
+                    <h2>以前</h2>
+                    <p>
+                        你必须使用<code>sidebar</code>来创建页面布局。
+                    </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page [secondary] with-sidebar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-header"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-sidebar"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-region"</span><span class="pln"> </span><span class="tag">/&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                    <h2>侧边栏</h2>
+                    <p>
+                        使用<code>&lt;ul /&gt;</code>定义侧边栏。
+                    </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-sidebar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;li&gt;&lt;a&gt;</span><span class="pln">Item</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L3"><span class="pln">            ...</span></li><li class="L4"><span class="pln">            </span><span class="tag">&lt;li&gt;&lt;a&gt;</span><span class="pln">Item</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L5"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                    <h2>图标</h2>
+                    <p>
+                        使用<code>icon-*</code>类名给菜单添加图标。
+                    </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-sidebar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;li&gt;&lt;a&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-cube"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="pln">Item</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L3"><span class="pln">            ...</span></li><li class="L4"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                    <h2>彩色贴纸</h2>
+                    <p>
+                        你可以给侧边栏的菜单项创建彩色贴纸。要创建彩色贴纸，只需要给菜单项添加类名<code>sticker</code>。
+                    </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-sidebar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"sticker"</span><span class="tag">&gt;&lt;a&gt;</span><span class="pln">Item</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L3"><span class="pln">            ...</span></li><li class="L4"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                    <p>
+                    使用前缀<code>sticker-</code>的类名给彩色贴纸设置颜色。例如: <code>sticker-color-blue</code>
+                    </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-sidebar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"sticker sticker-color-blue"</span><span class="tag">&gt;&lt;a&gt;</span><span class="pln">Item</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L3"><span class="pln">            ...</span></li><li class="L4"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L5"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                    <h2>二级菜单</h2>
+                    <p>
+                       你可以在侧边栏创建二级菜单。
+                    </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-sidebar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;li&gt;</span></li><li class="L3"><span class="pln">                </span><span class="tag">&lt;a&gt;</span><span class="pln">菜单名称</span><span class="tag">&lt;/a&gt;</span></li><li class="L4"><span class="pln">                </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"sub-menu"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                ...</span></li><li class="L6"><span class="pln">                </span><span class="tag">&lt;/ul&gt;</span></li><li class="L7"><span class="pln">            </span><span class="tag">&lt;/li&gt;</span></li><li class="L8"><span class="pln">            ...</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                    <h2>二级下拉菜单</h2>
+                    <p>
+                        你也可以使用<strong>dropdown</strong>创建二菜下拉菜单。
+                    </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-sidebar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">data-role</span><span class="pun">=</span><span class="atv">"dropdown"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">                </span><span class="tag">&lt;a&gt;</span><span class="pln">菜单标题</span><span class="tag">&lt;/a&gt;</span></li><li class="L4"><span class="pln">                </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"sub-menu sidebar-dropdown-menu"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                ...</span></li><li class="L6"><span class="pln">                </span><span class="tag">&lt;/ul&gt;</span></li><li class="L7"><span class="pln">            </span><span class="tag">&lt;/li&gt;</span></li><li class="L8"><span class="pln">            ...</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                    <p>
+                        使用下拉菜单需要在你的页面头部添加<code>dropdown.js</code>。
+                    </p>
+
+                    <h2>高亮显示二级菜单</h2>
+                    <p>
+                        你要高亮显示二菜单，需要添加类名<code>light</code>.
+                    </p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-sidebar"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;li&gt;</span></li><li class="L3"><span class="pln">                </span><span class="tag">&lt;a&gt;</span><span class="pln">Item</span><span class="tag">&lt;/a&gt;</span></li><li class="L4"><span class="pln">                </span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"sub-menu light"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                ...</span></li><li class="L6"><span class="pln">                </span><span class="tag">&lt;/ul&gt;</span></li><li class="L7"><span class="pln">            </span><span class="tag">&lt;/li&gt;</span></li><li class="L8"><span class="pln">            ...</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L0"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>

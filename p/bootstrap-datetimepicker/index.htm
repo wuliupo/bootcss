@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DateTime Picker · Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap日期时间选择器（Bootstrap DateTime Picker）是一个Bootstrap组件，能够简化页面上日期、时间的输入。">
+    <meta name="author" content="Bootstrap中文网">
+
+    <!-- Le styles -->
+    <link href="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="./ico/favicon.ico">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.htm">DateTime Picker</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.htm">首页</a>
+              </li>
+              <li class="">
+                <a href="./demo.htm">案例</a>
+              </li>
+              <li class="">
+                <a href="https://github.com/smalot/bootstrap-datetimepicker/archive/master.zip" target="_blank">下载</a>
+              </li>
+              <li class="">
+                <a href="https://github.com/smalot/bootstrap-datetimepicker" target="_blank">GitHub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead">
+  <div class="container">
+    <h1><a href="./index.htm">日期时间选择器</a></h1>
+    <p class="lead"><a href="./index.htm">Bootstrap日期和时间表单组件。</a></p>
+    <div class="row">
+      <div class="span9">
+      </div>
+      <div class="span3">
+        <a href="./demo.htm" class="btn btn-danger">案例 &gt;</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <a href="https://github.com/smalot/bootstrap-datetimepicker"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2000" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#project"><i class="icon-chevron-right"></i> 项目</a></li>
+          <li><a href="#screenshots"><i class="icon-chevron-right"></i> 截图</a></li>
+          <li><a href="#dependencies"><i class="icon-chevron-right"></i> 依赖</a></li>
+          <li><a href="#options"><i class="icon-chevron-right"></i> 选项</a></li>
+          <li><a href="#markup"><i class="icon-chevron-right"></i> 标记</a></li>
+          <li><a href="#methods"><i class="icon-chevron-right"></i> 方法</a></li>
+          <li><a href="#events"><i class="icon-chevron-right"></i> 事件</a></li>
+          <li><a href="#keyboard"><i class="icon-chevron-right"></i> 键盘支持</a></li>
+          <li><a href="#i18n"><i class="icon-chevron-right"></i> I18N国际化</a></li>
+          <li><a href="#implementations"><i class="icon-chevron-right"></i> 使用</a></li>
+          <li><a href="./demo.htm"><i class="icon-chevron-right"></i> 案例</a></li>
+        </ul>
+      </div>
+
+      <div class="span9">
+        <!-- Overview
+        ================================================== -->
+        <section id="project">
+          <div class="page-header">
+            <h2>项目 <a href="https://travis-ci.org/smalot/bootstrap-datetimepicker"><img src="https://api.travis-ci.org/smalot/bootstrap-datetimepicker.png?branch=master" alt="Build Status" style="margin-left: 100px" /></a></h2>
+          </div>
+
+          <div>
+            此项目是<a href="https://github.com/eternicode/bootstrap-datepicker">bootstrap-datetimepicker 项目</a> 的一个分支，原项目不支持 <code>Time</code> 选择。<br/>
+            其它部分也进行了改进、增强，例如<code>load</code> 过程增加了对 ISO-8601 日期格式的支持。<br/>
+            文档是拷贝/粘贴字原项目的文档，并且加入了更多细节说明。<br/>
+            &nbsp;
+          </div>
+
+          <div class="row">
+            <div class="span6">别犹豫了，下载下来试试吧 !</div>
+            <div class="span3"><a href="https://github.com/smalot/bootstrap-datetimepicker/archive/master.zip" class="btn btn-success" title="Download ZIP file from GitHub servers">下载 ZIP 包</a></div>
+          </div>
+
+          <div>
+            此地址可以克隆或fork本项目
+            <pre class="prettyprint linenums">git clone git://github.com/smalot/bootstrap-datetimepicker.git</pre>
+
+            <p>希望这个小小的项目能帮到你 !</p>
+
+            <p><br/><strong>Tags:</strong> <code>twitter-bootstrap</code>, <code>datetime</code>, <code>picker</code>, <code>component</code>, <code>javascript</code>, <code>widget</code></p>
+          </div>
+
+        </section>
+
+        <!-- Screenshots
+        ================================================== -->
+        <section id="screenshots">
+          <div class="page-header">
+            <h2>截图</h2>
+          </div>
+
+          <div class="row">
+            <div class="span3"><h3>十年视图</h3><img src="./screenshot/standard_decade.png" alt="Decade view" /></div>
+            <div class="span3"><h3>年视图</h3><img src="./screenshot/standard_year.png" alt="Year view" /></div>
+            <div class="span3"><h3>月视图</h3><img src="./screenshot/standard_month.png" alt="Month view" /></div>
+          </div>
+
+          <div class="row">
+            <div class="span3"><h3>日视图<span style="color: red">*</span></h3><img src="./screenshot/standard_day.png" alt="Day view" /></div>
+            <div class="span6"><h3>小时视图 <span style="color: red">*</span></h3><img src="./screenshot/standard_hour.png" alt="Hour view" /></div>
+          </div>
+
+          <div class="row">
+            <div class="span3"><h3>Day view w/ meridian <span style="color: red">*</span></h3><img src="./screenshot/standard_day_meridian.png" alt="Day view - meridian" /></div>
+            <div class="span6"><h3>Hour view w/ meridian <span style="color: red">*</span></h3><img src="./screenshot/standard_hour_meridian.png" alt="Hour view - meridian" /></div>
+          </div>
+
+          <div style="padding-top: 20px">
+            <span style="color: red">(*)</span> <em>Added views to select the time part</em>.
+          </div>
+
+        </section>
+
+        <!-- Dependencies
+        ================================================== -->
+        <section id="dependencies">
+          <div class="page-header">
+            <h2>依赖</h2>
+          </div>
+
+          <div>
+            <p>需要bootstrap的下拉菜单组件 (<code>dropdowns.less</code>) 的某些样式，还有bootstrap的sprites (<code>sprites.less</code> and associated images) 中的箭头图标。</p>
+
+            <p>A standalone .css file (including necessary dropdown styles and alternative, text-based arrows) can be generated by running <code>build/build_standalone.less</code> through the lessc compiler:</p>
+            <pre class="prettyprint linenums">$ lessc build/build_standalone.less datetimepicker.css</pre>
+          </div>
+        </section>
+
+        <!-- Options
+        ================================================== -->
+        <section id="options">
+          <div class="page-header">
+            <h2>选项</h2>
+          </div>
+
+          <div>
+            <p>所有需要"Date" 的选项都可以处理<code>Date</code> 对象; a String formatted according to the given <code>format</code>; or a timedelta relative to today, eg '-1d', '+6m +1y', etc, where valid units are 'd' (day), 'w' (week), 'm' (month), and 'y' (year).</p>
+
+            <p>你也可以指定一个符合 ISO-8601 格式的日期时间，就可以忽略下面的格式：<br/>
+            <ul>
+                <li>yyyy-mm-dd</li>
+                <li>yyyy-mm-dd hh:ii</li>
+                <li>yyyy-mm-ddThh:ii</li>
+                <li>yyyy-mm-dd hh:ii:ss</li>
+                <li>yyyy-mm-ddThh:ii:ssZ</li>
+            </ul>
+            </p>
+
+            <h3>format</h3>
+            <p>String.  默认值: 'mm/dd/yyyy'</p>
+            <p>日期格式， p, P, h, hh, i, ii, s, ss, d, dd, m, mm, M, MM, yy, yyyy 的任意组合。<br/>
+                <ul>
+                    <li>p : meridian in lower case ('am' or 'pm') - according to locale file</li>
+                    <li>P : meridian in upper case ('AM' or 'PM') - according to locale file</li>
+                    <li>s : seconds without leading zeros</li>
+                    <li>ss : seconds, 2 digits with leading zeros</li>
+                    <li>i : minutes without leading zeros</li>
+                    <li>ii : minutes, 2 digits with leading zeros</li>
+                    <li>h : hour without leading zeros - 24-hour format</li>
+                    <li>hh : hour, 2 digits with leading zeros - 24-hour format</li>
+                    <li>H : hour without leading zeros - 12-hour format</li>
+                    <li>HH : hour, 2 digits with leading zeros - 12-hour format</li>
+                    <li>d : day of the month without leading zeros</li>
+                    <li>dd : day of the month, 2 digits with leading zeros</li>
+                    <li>m : numeric representation of month without leading zeros</li>
+                    <li>mm : numeric representation of the month, 2 digits with leading zeros</li>
+                    <li>M : short textual representation of a month, three letters</li>
+                    <li>MM : full textual representation of a month, such as January or March</li>
+                    <li>yy : two digit representation of a year</li>
+                    <li>yyyy : full numeric representation of a year, 4 digits</li>
+                </ul></p>
+
+            <h3>weekStart</h3>
+            <p>Integer. 默认值：0</p>
+            <p>一周从哪一天开始。0（星期日）到6（星期六）</p>
+
+            <h3>startDate</h3>
+            <p>Date. 默认值：开始时间</p>
+            <p>The earliest date that may be selected; all earlier dates will be disabled.</p>
+
+            <h3>endDate</h3>
+            <p>Date. 默认值：结束时间</p>
+            <p>The latest date that may be selected; all later dates will be disabled.</p>
+
+            <h3>daysOfWeekDisabled</h3>
+            <p>String, Array.  默认值: '', []</p>
+            <p>Days of the week that should be disabled. Values are 0 (Sunday) to 6 (Saturday). Multiple values should be comma-separated. Example: disable weekends: <code>'0,6'</code> or <code>[0,6]</code>.</p>
+
+            <h3>autoclose</h3>
+            <p>Boolean. 默认值：false</p>
+            <p>当选择一个日期之后是否立即关闭此日期时间选择器。</p>
+
+            <h3>startView</h3>
+            <p>Number, String. 默认值：2, 'month'</p>
+            <p>日期时间选择器打开之后首先显示的视图。
+            可接受的值：</p>
+            <ul>
+                <li>0 or 'hour' for the hour view</li>
+                <li>1 or 'day' for the day view</li>
+                <li>2 or 'month' for month view (the default)</li>
+                <li>3 or 'year' for the 12-month overview</li>
+                <li>4 or 'decade' for the 10-year overview. Useful for date-of-birth datetimepickers.</li>
+            </ul>
+
+            <h3>minView</h3>
+            <p>Number, String. 默认值：0, 'hour'</p>
+            <p>日期时间选择器所能够提供的最精确的时间选择视图。</p>
+
+            <h3>maxView</h3>
+            <p>Number, String. 默认值：4, 'decade'</p>
+            <p>日期时间选择器最高能展示的选择范围视图。</p>
+
+            <h3>todayBtn</h3>
+            <p>Boolean, "linked".  默认值: false</p>
+            <p>如果此值为true 或 "linked"，则在日期时间选择器组件的底部显示一个 "Today" 按钮用以选择当前日期。如果是true的话，"Today" 按钮仅仅将视图转到当天的日期，如果是"linked"，当天日期将会被选中。</p>
+
+            <h3>todayHighlight</h3>
+            <p>Boolean.  默认值: false</p>
+            <p>如果为true, 高亮当前日期。</p>
+
+            <h3>keyboardNavigation</h3>
+            <p>Boolean.  默认值: true</p>
+            <p>是否允许通过方向键改变日期。</p>
+
+            <h3>language</h3>
+            <p>String.  默认值: 'en'</p>
+            <p>The two-letter code of the language to use for month and day names.  These will also be used as the input's value (and subsequently sent to the server in the case of form submissions).  Currently ships with English ('en'), German ('de'), Brazilian ('br'), and Spanish ('es') translations, but others can be added (see I18N below).  If an unknown language code is given, English will be used.</p>
+
+            <h3>forceParse</h3>
+            <p>Boolean.  默认值: true</p>
+            <p>当选择器关闭的时候，是否强制解析输入框中的值。也就是说，当用户在输入框中输入了不正确的日期，选择器将会尽量解析输入的值，并将解析后的正确值按照给定的格式<code>format</code>设置到输入框中。</p>
+
+            <h3>minuteStep</h3>
+            <p>Number.  默认值: 5</p>
+            <p>此数值被当做步进值用于构建小时视图。对于每个 <code>minuteStep</code> 都会生成一组预设时间（分钟）用于选择。</p>
+
+            <h3>pickerReferer : 不建议使用</h3>
+            <p>String.  默认值: 'default' <em>(other value available : 'input')</em></p>
+            <p>The referer element to place the picker for the component implementation. If you want to place the picker just under the input field, just specify <code>input</code>.</p>
+
+            <h3>pickerPosition</h3>
+            <p>String.  默认值: 'bottom-right' <em>(还支持 : 'bottom-left')</em></p>
+            <p>此选项当前只在组件实现中提供支持。通过设置选项可以讲选择器放倒输入框下方。</p>
+
+            <h3>viewSelect</h3>
+            <p>Number or String.  默认值: <code>same as minView</code> <em>(supported values are: 'decade', 'year', 'month', 'day', 'hour')</em></p>
+            <p>With this option you can select the view from which the date will be selected. By default it's the last one, however you can choose the first one, so at each click the date will be updated.</p>
+
+            <h3>showMeridian</h3>
+            <p>Boolean.  默认值: false</p>
+            <p>This option will enable meridian views for <code>day</code> and <code>hour</code> views.</p>
+
+            <h3>initialDate</h3>
+            <p>Date or String.  默认值: new Date()</p>
+            <p>You can initialize the viewer with a date. By default it's now, so you can specify yesterday or today at midnight ...</p>
+          </div>
+
+        </section>
+
+        <!-- Markup
+        ================================================== -->
+        <section id="markup">
+          <div class="page-header">
+            <h2>标记</h2>
+          </div>
+
+          <div>
+            <p>组件模版。</p>
+
+            <pre class="prettyprint linenums">
+&lt;div class=&quot;input-append date&quot; id=&quot;datetimepicker&quot; data-date=&quot;12-02-2012&quot; data-date-format=&quot;dd-mm-yyyy&quot;&gt;
+    &lt;input class=&quot;span2&quot; size=&quot;16&quot; type=&quot;text&quot; value=&quot;12-02-2012&quot;&gt;
+    &lt;span class=&quot;add-on&quot;&gt;&lt;i class=&quot;icon-th&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;            </pre>
+
+            <p>带有重置按钮（用于清空输入框）的组件模版。</p>
+
+            <pre class="prettyprint linenums">
+&lt;div class=&quot;input-append date&quot; id=&quot;datetimepicker&quot; data-date=&quot;12-02-2012&quot; data-date-format=&quot;dd-mm-yyyy&quot;&gt;
+    &lt;input class=&quot;span2&quot; size=&quot;16&quot; type=&quot;text&quot; value=&quot;12-02-2012&quot;&gt;
+    &lt;span class=&quot;add-on&quot;&gt;&lt;i class=&quot;icon-remove&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;add-on&quot;&gt;&lt;i class=&quot;icon-th&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;            </pre>
+          </div>
+        </section>
+
+        <!-- Methods
+        ================================================== -->
+        <section id="methods">
+          <div class="page-header">
+            <h2>方法</h2>
+          </div>
+
+          <div>
+            <h3>.datetimepicker(options)</h3>
+
+            <p>初始化日期时间选择器。</p>
+
+            <h3>remove</h3>
+
+            <p>参数: None</p>
+
+            <p>移除日期时间选择器。同时移除已经绑定的event、内部绑定的对象和HTML元素。</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('remove');</pre>
+
+            <h3>show</h3>
+
+            <p>参数: None</p>
+
+            <p>显示日期时间选择器。</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('show');</pre>
+
+            <h3>hide</h3>
+
+            <p>参数: None</p>
+
+            <p>隐藏日期时间选择器。</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('hide');</pre>
+
+            <h3>update</h3>
+
+            <p>参数: None</p>
+
+            <p>使用当前输入框中的值更新日期时间选择器。</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('update');</pre>
+
+            <h3>setStartDate</h3>
+
+            <p>参数:</p>
+
+            <ul>
+            <li>startDate (String)</li>
+            </ul><p>给日期时间选择器设置一个新的起始日期。</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('setStartDate', '2012-01-01');</pre>
+
+            <p>Omit startDate (or provide an otherwise falsey value) to unset the limit.</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('setStartDate');
+$('#datetimepicker').datetimepicker('setStartDate', null);</pre>
+
+            <h3>setEndDate</h3>
+
+            <p>参数:</p>
+
+            <ul>
+            <li>endDate (String)</li>
+            </ul><p>给日期时间选择器设置结束日期。</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('setEndDate', '2012-01-01');</pre>
+
+            <p>Omit endDate (or provide an otherwise falsey value) to unset the limit.</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('setEndDate');
+$('#datetimepicker').datetimepicker('setEndDate', null);</pre>
+
+            <h3>setDaysOfWeekDisabled</h3>
+
+            <p>参数:</p>
+
+            <ul>
+            <li>daysOfWeekDisabled (String|Array)</li>
+            </ul><p>Sets the days of week that should be disabled.</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('setDaysOfWeekDisabled', [0,6]);</pre>
+
+            <p>Omit daysOfWeekDisabled (or provide an otherwise falsey value) to unset the disabled days.</p>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker('setDaysOfWeekDisabled');
+$('#datetimepicker').datetimepicker('setDaysOfWeekDisabled', null);</pre>
+          </div>
+
+        </section>
+
+        <!-- Events
+        ================================================== -->
+        <section id="events">
+          <div class="page-header">
+            <h2>事件（Events）</h2>
+          </div>
+
+          <div>
+            <p>Datetimepicker 类暴露了一组event用以对日期进行操作。</p>
+
+            <h3>show</h3>
+
+            <p>当选择器显示时被触发。</p>
+
+            <h3>hide</h3>
+
+            <p>当选择器隐藏时被触发。</p>
+
+            <h3>changeDate</h3>
+
+            <p>当日期被改变时被触发。</p>
+
+            <pre class="prettyprint linenums">
+$('#date-end')
+.datetimepicker()
+.on('changeDate', function(ev){
+    if (ev.date.valueOf() &lt; date-start-display.valueOf()){
+        ....
+    }
+});
+            </pre>
+
+            <h3>changeYear</h3>
+
+            <p>当十年视图上的年视图<code>view</code>被改变时触发。</p>
+
+            <h3>changeMonth</h3>
+
+            <p>当年视图上的月视图<code>view</code>被改变时触发。 </p>
+
+            <h3>outOfRange</h3>
+
+            <p>当用户选择的日期超出<code>startDate</code> 或<code>endDate</code> 时，或者通过<code>setDate</Code> 或 <code>setUTCDate</code>方法设置日期超出范围时被触发。</p>
+          </div>
+
+        </section>
+
+        <!-- Keyboard support
+        ================================================== -->
+        <section id="keyboard">
+          <div class="page-header">
+            <h2>键盘支持</h2>
+          </div>
+
+          <div>
+            <p>日期时间选择器提供了键盘导航：</p>
+
+            <h3>up, down, left, right 方向键</h3>
+
+            <p>这些方向键中，left/right 向后/向前 一天，up/down 向后/向前 一周。</p>
+
+            <p>配合shift键，up/left 向后退一个月，down/right 向前进一个月。</p>
+
+            <p>配置ctrl键，up/left 向后退一年，down/right 向前进一年。</p>
+
+            <p>Shift+ctrl 和 ctrl 同等效果 - 也就是说，他们不能同时改变月和年，只能单独改变年。</p>
+
+            <h3>escape</h3>
+
+            <p>escape 键可以用来隐藏、重新显示日期时间选择器；当用户希望手工编辑输入框中的值是会很有用。</p>
+
+            <h3>enter</h3>
+
+            <p>当选择器处于显示状态时，enter键只是将其隐藏。当选择器处于隐藏状态时，enter键发挥通常的功能 - 提交当前表单，或者其他。</p>
+          </div>
+        </section>
+
+        <!-- I18N
+        ================================================== -->
+        <section id="i18n">
+          <div class="page-header">
+            <h2>I18N国际化</h2>
+          </div>
+
+          <div>
+            <p>本插件支持月、每周中天的名称、<code>weekStart</code>选项的国际化。默认是语言是English ('en');其它可以使用的翻译文件在<code>js/locales/</code> 目录中，只需在本插件之后引入需要的语言文件即可。需要增加额外语言支持的话，只需向 <code>$.fn.datetimepicker.dates</code>中增加一个key即可，一定要放在调用 <code>.datetimepicker()</code>之前。如下案例：</p>
+
+            <pre class="prettyprint linenums">
+$.fn.datetimepicker.dates['en'] = {
+    days: [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;],
+    daysShort: [&quot;Sun&quot;, &quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;],
+    daysMin: [&quot;Su&quot;, &quot;Mo&quot;, &quot;Tu&quot;, &quot;We&quot;, &quot;Th&quot;, &quot;Fr&quot;, &quot;Sa&quot;, &quot;Su&quot;],
+    months: [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;],
+    monthsShort: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],
+    today: &quot;Today&quot;
+};</pre>
+
+            <p>Right-to-left languages may also include <code>rtl: true</code> to make the calendar display appropriately.</p>
+
+            <p>If your browser (or those of your users) is displaying characters wrong, chances are the browser is loading the javascript file with a non-unicode encoding. Simply add <code>charset="UTF-8"</code> to your <code>script</code> tag:</p>
+
+            <pre class="prettyprint linenums">
+&lt;script type=&quot;text/javascript&quot; src=&quot;bootstrap-datetimepicker.de.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+</pre>
+          </div>
+
+        </section>
+
+        <!-- Examples
+        ================================================== -->
+        <section id="implementations">
+          <div class="page-header">
+            <h2>使用</h2>
+          </div>
+
+          <div>
+            <p>绑定输入框，并设置format选项：</p>
+
+            <pre class="prettyprint linenums">&lt;input type=&quot;text&quot; value=&quot;2012-05-15 21:05&quot; id=&quot;datetimepicker&quot;&gt;</pre>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker({
+    format: 'yyyy-mm-dd hh:ii'
+});</pre>
+
+            <p>绑定输入框，并设置format标记：</p>
+
+            <pre class="prettyprint linenums">&lt;input type=&quot;text&quot; value=&quot;2012-05-15 21:05&quot; id=&quot;datetimepicker&quot; data-date-format=&quot;yyyy-mm-dd hh:ii&quot;&gt;</pre>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker();</pre>
+
+            <p>作为组件使用：</p>
+
+            <pre class="prettyprint linenums">&lt;div class=&quot;input-append date&quot; id=&quot;datetimepicker&quot; data-date=&quot;12-02-2012&quot; data-date-format=&quot;dd-mm-yyyy&quot;&gt;
+    &lt;input size=&quot;16&quot; type=&quot;text&quot; value=&quot;12-02-2012&quot; readonly&gt;
+    &lt;span class=&quot;add-on&quot;&gt;&lt;i class=&quot;icon-th&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;</pre>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker();</pre>
+
+            <p>作为内联日期时间选择器：</p>
+
+            <pre class="prettyprint linenums">&lt;div id=&quot;datetimepicker&quot;&gt;&lt;/div&gt;</pre>
+
+            <pre class="prettyprint linenums">$('#datetimepicker').datetimepicker();</pre>
+
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>You can contact and follow me on Twitter <a href="https://twitter.com/sebastienmalot" target="_blank">@sebastienmalot</a>.</p>
+        <ul class="footer-links">
+          <li><a href="./index.htm">项目</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="./demo.htm">案例</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/smalot/bootstrap-datetimepicker/archive/master.zip">下载</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://github.com/smalot/bootstrap-datetimepicker">GitHub</a></li>
+        </ul>
+        <p>Bootstrap DateTime Picker由<a href="http://www.bootcss.com/">Bootstrap中文网</a>翻译整理</p>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   <script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js"></script>
+
+    <script src="js/holder/holder.js"></script>
+    <script src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="js/application.js"></script>
+
+    <script src="/p/projects.js"></script>
+
+
+    <script type="text/javascript">
+        $('a[href^="#"]').click(function(){  
+            var the_id = $(this).attr("href");  
+            $('html, body').animate({  
+                scrollTop:$(the_id).offset().top  
+            }, 'slow');  
+            return false;  
+        });
+    </script>
+
+  </body>
+</html>
+

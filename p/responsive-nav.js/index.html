@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>响应式导航（Responsive Nav） &mdash; 响应式导航插件（Responsive Navigation Plugin）</title>
+    <meta name="author" content="@viljamis">
+    <meta name="description" content="不依赖于任何第三方工具库、支持触屏操作的响应式导航（Responsive navigation）插件">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icon.png">
+    <script>
+      var doc = document, docEl = doc.documentElement;
+      docEl.className = docEl.className.replace(/(^|\s)no-js(\s|$)/, " js ");
+    </script>
+    <!-- <script src="//use.typekit.net/sxv1brn.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script> -->
+    <link href="stylesheets/styles.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="javascripts/all.js" type="text/javascript"></script>
+    <!--[if lte IE 9]><script src="javascripts/respond.js" type="text/javascript"></script><![endif]-->
+    <style>
+    body {
+      font-family: "chaparral-pro",Georgia,"times new roman",times,serif,Arial, "Microsoft YaHei", '\5B8B\4F53', simsun, sans-serif;
+    }
+    </style>
+  </head>
+  <body onload="prettyPrint()">
+    <div class="border" id="home"></div>
+    <div class="wrapper">
+      <div id="nav">
+        <ul>
+          <li class="active"><a href="index.html">首页</a></li>
+          <li><a href="#features">特色</a></li>
+          <li><a href="#instructions">使用指南</a></li>
+          <li><a href="demo/" target="_blank">案例</a></li>
+          <li><a href="https://github.com/viljamis/responsive-nav.js" rel="external" target="_blank">View on GitHub</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="intro">
+    <h1>响应式导航</h1>
+  <div class="intro-container">
+    <p>此响应式导航（Responsive Nav）插件不依赖于任何第三方工具库，并且支持触屏操作。调整当前窗口大小即可看到惊艳的效果！</p>
+    <a href="https://github.com/viljamis/responsive-nav.js/archive/master.zip" rel="external" class="btn">下载</a>
+  </div>
+</div>
+
+<a href="demo/" class="image" title="查看案例" target="_blank">
+  <div data-picture data-alt="Responsive Nav in various sizes">
+    <div data-src="images/illustration.jpg"></div>
+    <div data-src="images/illustration_small.jpg" data-media="(max-width: 46.24em)"></div>
+    <!-- Fallback content for non-JS browsers -->
+    <noscript><img src="images/illustration_small.jpg" alt="Responsive Nav in various sizes"></noscript>
+  </div>
+</a>
+
+<div id="features" class="section">
+  <h2>特色</h2>
+  <p>响应式导航（Responsive Nav）是一个很小的JavaScript插件，压缩之后仅有1.7KB，能帮你创建针对小屏幕的可切换式导航。它支持触屏事件和CSS3过渡（transitions）效果，具有非常好的性能。他还能支持从height: 0 到 height: auto过渡，这是在CSS3过渡效果中很不容易实现的。点此<a href="demo/" target="_blank">查看演示效果</a>或者调整当前窗口大小也可以看到此插件的实际效果。<!--Read also the release post on <a href="http://www.smashingmagazine.com/?p=158306">Smashing&nbsp;Magazine</a>.--></p>
+  <ul class="list-1">
+    <li>压缩后仅1.7 KB。</li>
+    <li>不依赖任何第三方工具库。</li>
+    <li>支持CSS3过渡（transitions）效果、触屏事件，并且只需要很简单的HTML代码结构。</li>
+    <li>移除了物理触屏事件和系统点击事件之间的300ms延时。</li>
+  </ul><ul class="list-2">
+    <li>可以将CSS3过渡（transitions）效果与height:&nbsp;auto一同使用。</li>
+    <li>从设计此插件之初就将可访问性考虑在内，它能支持屏幕阅读器，并且能在禁用JavaScript的浏览器上工作。</li>
+    <li>可以在所有主流桌面、移动设备浏览器上工作，包括IE6+。</li>
+  </ul>
+</div>
+
+<div id="instructions" class="section">
+  <h2>使用指南</h2>
+  <p>按照下面的步骤即可引入此插件并让其顺利的运行。如果在使用过程中发现bug，请提交到<a href="https://github.com/viljamis/responsive-nav.js/issues" target="_blank">GitHub&nbsp;issues</a>.</p>
+  
+<h3>引入文件</h3>
+<pre class="prettyprint lang-html"><code>&lt;!-- 引入这些文件至 &lt;head> 中 -->
+&lt;link rel="stylesheet" href="responsive-nav.css">
+&lt;script src="responsive-nav.js">&lt;/script>
+</code></pre>
+
+<h3>添加标签</h3>
+<pre class="prettyprint lang-html"><code>&lt;div id="nav">
+  &lt;ul>
+    &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">Projects&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
+  &lt;/ul>
+&lt;/div>
+</code></pre>
+
+<h3>启动此插件</h3>
+<pre class="prettyprint lang-html"><code>&lt;!-- 将下面这段代码放置在 &lt;/body> 之前 -->
+&lt;script>
+  var navigation = responsiveNav("#nav");
+&lt;/script>
+</code></pre>
+
+<h3>调整参数</h3>
+<pre class="prettyprint lang-js"><code>var navigation = responsiveNav("#nav", { // Selector: The ID of the wrapper
+  animate: true, // Boolean: 是否启动CSS过渡效果（transitions）， true 或 false
+  transition: 400, // Integer: 过渡效果的执行速度，以毫秒（millisecond）为单位
+  label: "Menu", // String: Label for the navigation toggle
+  insert: "after", // String: Insert the toggle before or after the navigation
+  customToggle: "", // Selector: Specify the ID of a custom toggle
+  openPos: "relative", // String: Position of the opened nav, relative or static
+  jsClass: "js", // String: 'JS enabled' class which is added to &lt;html> el
+  debug: false, // Boolean: Log debug messages to console, true 或 false
+  init: function(){}, // Function: Init callback
+  open: function(){}, // Function: Open callback
+  close: function(){} // Function: Close callback
+});
+</code></pre>
+
+<h3>可调用的方法</h3>
+<pre class="prettyprint lang-js"><code>// 销毁插件
+navigation.destroy();
+
+// Toggle
+navigation.toggle();
+</code></pre>
+</div>
+
+<div id="download" class="section">
+  <a href="https://github.com/viljamis/responsive-nav.js/archive/master.zip" rel="external" class="btn">下载</a>
+  <span>or</span>
+  <a href="https://github.com/viljamis/responsive-nav.js" rel="external" class="btn repo" target="_blank">View source on GitHub</a>
+</div>
+      </div>
+      <div class="footer">Brought to you by <a href="http://viljamis.com" rel="external">@viljamis</a>. Follow&nbsp;me on <a href="http://twitter.com/viljamis" rel="external">Twitter</a>&nbsp;for&nbsp;updates.
+        <p>响应式导航（Responsive Nav）由<a href="http://www.bootcss.com/">Bootstrap中文网</a>翻译整理</p></div>
+    </div>
+
+    <script>
+      // Init responsive-nav.js
+      var navigation = responsiveNav("#nav");
+    </script>
+<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/p/projects.js"></script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的基于Bootstrap的解决方案。">
+    <meta name="author" content="Bootstrap中文网">
+    <meta name="keywords" content="windows 8, modern style, Bootstrap,Metro UI, style, modern, css, framework">
+
+    <link href="css/modern.css" rel="stylesheet">
+    <link href="css/modern-responsive.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+
+    <script type="text/javascript" src="js/modern/dropdown.js"></script>
+    <script type="text/javascript" src="js/modern/accordion.js"></script>
+    <script type="text/javascript" src="js/modern/buttonset.js"></script>
+    <script type="text/javascript" src="js/modern/carousel.js"></script>
+    <script type="text/javascript" src="js/modern/input-control.js"></script>
+    <script type="text/javascript" src="js/modern/pagecontrol.js"></script>
+    <script type="text/javascript" src="js/modern/rating.js"></script>
+    <script type="text/javascript" src="js/modern/slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-slider.js"></script>
+    <script type="text/javascript" src="js/modern/tile-drag.js"></script>
+
+    <title>多页控件 · Bootstrap Metro UI CSS 中文版</title>
+</head>
+<body class="modern-ui" onload="prettyPrint()">
+
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
+
+        <a href="index.html"><span class="element brand">
+            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
+           Bootstrap Metro UI CSS 中文版 <small>0.15.8.12</small>
+        </span></a>
+
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">首页</a></li>
+            <li data-role="dropdown">
+                <a href="#">脚手架</a>
+                <ul class="dropdown-menu">
+                    <li><a href="global.html">全局样式</a></li>
+                    <li><a href="layout.html">布局与模板</a></li>
+                    <li><a href="grid.html">网格系统</a></li>
+                    <li class="divider"></li>
+                    <li><a href="responsive.html">响应式设计</a>
+                    </li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">基本样式</a>
+                <ul class="dropdown-menu">
+                    <li><a href="typography.html">排版</a></li>
+                    <li><a href="tables.html">表格</a></li>
+                    <li><a href="forms.html">表单</a></li>
+                    <li><a href="buttons.html">按钮</a></li>
+                    <li><a href="images.html">图像</a></li>
+                    <li class="divider"></li>
+                    <li><a href="icons.html">图标</a></li>
+                </ul>
+            </li>
+             <li data-role="dropdown"><a href="#">组件</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tiles.html">Tiles</a></li>
+                    <li><a href="menus.html">菜单与导航</a></li>
+                    <li><a href="sidebar.html">侧边栏</a></li>
+                    <li><a href="pagecontrol.html">多页控件</a></li>
+                    <li><a href="accordion.html">手风琴</a></li>
+                    <li><a href="buttons-set.html">按钮组</a></li>
+                    <li><a href="rating.html">评分</a></li>
+                    <li><a href="progress.html">进度条</a></li>
+                    <li><a href="carousel.html">幻灯片</a></li>
+                    <li><a href="listview.html">列表视图</a></li>
+                    <li><a href="slider.html">滑块</a></li>
+                    <li><a href="dialog.html">对话框</a></li>
+                    <li class="divider"></li>
+                    <li><a href="notices.html">通知与回复</a></li>
+                    <li class="divider"></li>
+                    <li><a href="cards.html">额外惊喜 - 一副扑克</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS" target="_blank">源码</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+<div class="page secondary">
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1>多页控件<small>案例</small></h1>
+                <a class="back-button big page-back" href="/"></a>
+            </div>
+        </div>
+
+        <div class="page-region">
+            <div class="page-region-content">
+
+                <div data-role="page-control" class="page-control span10">
+                    <span class="menu-pull"></span>
+                    <div class="menu-pull-bar">页面 1</div>
+
+                    <ul>
+                        <li class="active"><a href="#page1">页面 1</a></li>
+                        <li><a href="#page2">页面 2</a></li>
+                        <li><a href="#page3">页面 3</a></li>
+                        <li><a href="#page4">页面 4</a></li>
+                    </ul>
+
+                    <div class="frames">
+                        <div id="page1" class="frame active">
+                            <h2>页面 1</h2>
+                            <p>Windows8已经到来，基于Metro UI风格完全改变了Window要操作系统。Metro是微软的设计语言，微软将这个新的UI用于他们的所有平台，包括台式机、平板电脑、手机和他们的网站。就我个人而言，我喜欢Metro&#12288;UI，它的简单性、基于网格的接口（适合响应式设计），以及他在每个部分的一致性很适合现代网页设计的需求。Metro&#12288;UI也将挑起网页设计的一股新浪潮。</p>
+                        </div>
+                        <div id="page2" class="frame">
+                            <h2>页面 2</h2>
+                            <p>现在Metro的概念传播到多种产品上。品牌宣传、媒体中心，Windows Phone，Windows8操作系统。其最大特点就是通过方正的区块标记简单的连接到需要的地方，简单明了，从视觉上就能告诉我们要去的地方是什么？
+
+                               微软是这样描述的：“Metro是我们的设计语言。我们称之为‘Metro’，是因为他的现代和简约，而且他在移动时，速度非常的快，他的排版结合印刷术。而且他是完全真实的”。</p>
+                        </div>
+                        <div id="page3" class="frame">
+                            <h2>页面 3</h2>
+                            <p>Metro UI风格大家一定见识了不少，至于其好坏我们在此不做讨论，今天开始，我们在w3cplus上会推出一系列的Metro UI设计风格的DEMO，当然这些DEMO不是仅仅的Metro UI风格，我们会尽量使用CSS3属性，让其效果更佳优美，或者我们也会将其结合Bootstrap制作一些DEMO以供大家学习。另外广大网友提意在DEMO中加入简单的介绍，方便理解。那么从今天开始的DEMO，我们会加入一些说明，如果您有更好的建议，希望能告诉我们。谢谢！</p>
+                        </div>
+                        <div id="page4" class="frame">
+                            <h2>页面 4</h2>
+                            <p>W3CPLUS是一个前端爱好者的家园，W3CPLUS努力打造最优秀的web 前端学习的站点。W3CPLUS力求原创，以一起学习，一起进步，共同分享为原则。W3CPLUS站提供了有关于css,css3,html,html5,jQuery,手机移动端的技术文档、DEMO、资源，与前端爱好者一起共勉。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>自定义组件</h2>
+<pre class="prettyprint linenums span10"><ol class="linenums"><li class="L0"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page-control"</span><span class="pln"> </span><span class="atn">data-role</span><span class="pun">=</span><span class="atv">"page-control"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">        === Tabs ===</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;ul&gt;</span></li><li class="L3"><span class="pln">            </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"active"</span><span class="tag">&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#frame1"</span><span class="tag">&gt;</span><span class="pln">页面标题</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L4"><span class="pln">            ...</span></li><li class="L5"><span class="pln">            </span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#frameN"</span><span class="tag">&gt;</span><span class="pln">页面标题N</span><span class="tag">&lt;/a&gt;&lt;/li&gt;</span></li><li class="L6"><span class="pln">        </span><span class="tag">&lt;/ul&gt;</span></li><li class="L7"><span class="pln">        === Tabs content ===</span></li><li class="L8"><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"frames"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"frame active"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"frame1"</span><span class="tag">&gt;</span><span class="pln"> ...页面标题对应的页面内容... </span><span class="tag">&lt;/div&gt;</span></li><li class="L0"><span class="pln">            ...</span></li><li class="L1"><span class="pln">            </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"frame"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"frameN"</span><span class="tag">&gt;</span><span class="pln"> ...页面标题N对应的内容... </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+                <h2>Javascript</h2>
+                <p>在页面头部加载<code>pagecontrol.js</code></p>
+
+                <br>
+                <div class="grid">
+                    <div class="row">
+                                            </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <span class="element">
+                    2012, Metro UI CSS &copy; by <a class="fg-color-white" href="mailto:sergey@pimenov.com.ua">Sergey Pimenov</a>.
+
+                    Metro UI CSS 由<a href="http://www.bootcss.com/" class="fg-color-white">Bootstrap中文网</a>翻译整理
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="//cdnjs.bootcss.com/ajax/libs/prettify/r224/prettify.js"></script>
+
+    <script src="/p/projects.js"></script>
+    </body>
+</html>
